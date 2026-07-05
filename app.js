@@ -4045,6 +4045,50 @@ async function downloadRangeTopics() {
   }
 }
 
+// =============================================================
+// MOBILE RESPONSIVE TAB SWITCHER LOGIC
+// =============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.mobile-tab-btn');
+  const cols = {
+    'topics': document.querySelector('.sidebar-topics'),
+    'ai-gen': document.querySelector('.sidebar-controls-left'),
+    'design': document.querySelector('.sidebar-right'),
+    'preview': document.querySelector('.sandbox')
+  };
+
+  function setMobileActiveCol(tabKey) {
+    Object.keys(cols).forEach(key => {
+      const col = cols[key];
+      if (col) {
+        if (key === tabKey) {
+          col.classList.add('mobile-active-col');
+        } else {
+          col.classList.remove('mobile-active-col');
+        }
+      }
+    });
+  }
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const tabKey = btn.getAttribute('data-tab');
+      setMobileActiveCol(tabKey);
+    });
+  });
+
+  // Default active tab on load on mobile
+  setMobileActiveCol('preview');
+  const previewTabBtn = document.querySelector('.mobile-tab-btn[data-tab="preview"]');
+  if (previewTabBtn) {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    previewTabBtn.classList.add('active');
+  }
+});
+
 
 
 
