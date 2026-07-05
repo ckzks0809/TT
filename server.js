@@ -3,7 +3,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 8080;
+const PORT = const PORT = 8080;
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
