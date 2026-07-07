@@ -387,13 +387,34 @@
               <input type="number" id="buffer-end-idx" class="select-control" value="12" min="1" style="width: 100%; padding: 4px;">
             </div>
           </div>
+          <!-- 발행 모드 선택 -->
           <div>
-            <label for="buffer-frequency-select">발행 빈도/간격 설정</label>
-            <select id="buffer-frequency-select" class="select-control" style="width: 100%;">
-              <option value="1d" selected>매일 1건 발행 (기본)</option>
-              <option value="15d">매월 2건 발행 (15일 간격)</option>
-              <option value="30d">매월 1건 발행 (30일 간격)</option>
+            <label for="buffer-mode-select">📤 발행 모드 선택</label>
+            <select id="buffer-mode-select" class="select-control" style="width: 100%;">
+              <option value="single" selected>🔢 단건 지정 발행 (1~100건, 자동 종료)</option>
+              <option value="1d">📅 반복 예약 – 매일 1건 발행</option>
+              <option value="15d">📅 반복 예약 – 매월 2건 (15일 간격)</option>
+              <option value="30d">📅 반복 예약 – 매월 1건 (30일 간격)</option>
             </select>
+          </div>
+
+          <!-- 단건 지정 발행 수 입력 (단건 모드일 때만 표시) -->
+          <div id="buffer-single-count-wrap" style="display: flex; flex-direction: column; gap: 6px; background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.25); border-radius: 8px; padding: 10px;">
+            <label for="buffer-single-count" style="font-size: 11px; font-weight: bold; color: var(--text-primary);">📌 발행할 카드뉴스 건수 지정 (1 ~ 100건)</label>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input type="number" id="buffer-single-count" class="select-control" value="1" min="1" max="100" style="width: 80px; padding: 6px; text-align: center; font-size: 16px; font-weight: bold;">
+              <span style="font-size: 11px; color: var(--text-secondary);">건 발행 후 자동 중지</span>
+            </div>
+            <div style="font-size: 9px; color: var(--text-secondary); line-height: 1.5;">
+              💡 지정한 건수만큼만 Buffer에 등록 후 자동으로 멈춥니다.<br>
+              카드뉴스 보유량과 무관하게 지정 건수만 예약됩니다.
+            </div>
+          </div>
+
+          <!-- 반복 예약 모드 안내 (반복 모드일 때만 표시) -->
+          <div id="buffer-repeat-mode-notice" style="display: none; background: rgba(234,179,8,0.08); border: 1px solid rgba(234,179,8,0.3); border-radius: 8px; padding: 10px; font-size: 9px; color: #fbbf24; line-height: 1.5;">
+            ⚠️ 반복 예약 모드: 시작~끝 주제 번호 범위의 카드뉴스를 설정한 간격으로 순서대로 Buffer에 등록합니다.<br>
+            카드뉴스가 모두 소진되면 자동으로 발행이 종료됩니다.
           </div>
         </div>
 

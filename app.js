@@ -2466,10 +2466,10 @@ async function scheduleAllCardsToBuffer() {
     return;
   }
 
-  // Parse start / end index and frequency
+  // Parse start / end index and mode
   let startIdx = parseInt(document.getElementById("buffer-start-idx").value, 10) - 1;
   let endIdx = parseInt(document.getElementById("buffer-end-idx").value, 10) - 1;
-  const frequency = document.getElementById("buffer-frequency-select").value;
+  const bufferMode = document.getElementById("buffer-mode-select").value;
 
   if (isNaN(startIdx) || startIdx < 0) startIdx = 0;
   if (isNaN(endIdx) || endIdx >= topicsData.length) endIdx = topicsData.length - 1;
@@ -2478,10 +2478,28 @@ async function scheduleAllCardsToBuffer() {
     return;
   }
 
-  const cycleText = frequency === "1d" ? "매일 1건" : (frequency === "15d" ? "매월 2건 (15일 간격)" : "매월 1건 (30일 간격)");
+  // Single-batch: clamp endIdx based on count input
+  let isSingleBatch = (bufferMode === "single");
+  let singleCount = 1;
+  if (isSingleBatch) {
+    singleCount = parseInt(document.getElementById("buffer-single-count").value, 10) || 1;
+    if (singleCount < 1) singleCount = 1;
+    if (singleCount > 100) singleCount = 100;
+    // Limit endIdx so we only process `singleCount` topics from startIdx
+    endIdx = Math.min(startIdx + singleCount - 1, topicsData.length - 1);
+  }
+
+  const frequency = isSingleBatch ? "1d" : bufferMode; // single batch uses 1d interval by default
   const totalToSchedule = endIdx - startIdx + 1;
 
-  const confirmMsg = `주제 번호 ${startIdx + 1}번부터 ${endIdx + 1}번까지 총 ${totalToSchedule}개 카드뉴스를\n${startDateVal}일부터 ${cycleText}으로\nBuffer에 발행 예약을 등록하시겠습니까?`;
+  let modeLabel;
+  if (isSingleBatch) {
+    modeLabel = `단건 지정 ${singleCount}건 발행 후 자동 종료`;
+  } else {
+    modeLabel = frequency === "1d" ? "매일 1건" : (frequency === "15d" ? "매월 2건 (15일 간격)" : "매월 1건 (30일 간격)");
+  }
+
+  const confirmMsg = `주제 번호 ${startIdx + 1}번부터 ${endIdx + 1}번까지 총 ${totalToSchedule}개 카드뉴스를\n${startDateVal}일부터 [${modeLabel}] 으로\nBuffer에 발행 예약을 등록하시겠습니까?`;
   if (!confirm(confirmMsg)) return;
 
   // Toggle active controls UI
@@ -2496,7 +2514,10 @@ async function scheduleAllCardsToBuffer() {
   bufferLog("========================================");
   bufferLog("🚀 Buffer 예약 등록 작업을 개시합니다.");
   bufferLog(`📅 범위: ${startIdx + 1} ~ ${endIdx + 1}번 (${totalToSchedule}개 주제)`);
-  bufferLog(`📅 시작: ${startDateVal} | 주기: ${cycleText}`);
+  bufferLog(`📌 모드: ${modeLabel} | 시작: ${startDateVal}`);
+  if (isSingleBatch) {
+    bufferLog(`🔢 단건 지정 발행 – ${totalToSchedule}건 등록 완료 시 자동 종료됩니다.`);
+  }
 
   const initialTopicIndex = currentTopicIndex;
 
@@ -4087,7 +4108,34 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(b => b.classList.remove('active'));
     previewTabBtn.classList.add('active');
   }
+
+  // =============================================================
+  // BUFFER MODE TOGGLE: show/hide single-count vs. repeat notice
+  // =============================================================
+  const bufferModeSelect = document.getElementById('buffer-mode-select');
+  const singleCountWrap = document.getElementById('buffer-single-count-wrap');
+  const repeatModeNotice = document.getElementById('buffer-repeat-mode-notice');
+
+  if (bufferModeSelect && singleCountWrap && repeatModeNotice) {
+    function updateBufferModeUI() {
+      const mode = bufferModeSelect.value;
+      if (mode === 'single') {
+        singleCountWrap.style.display = 'flex';
+        repeatModeNotice.style.display = 'none';
+      } else {
+        singleCountWrap.style.display = 'none';
+        repeatModeNotice.style.display = 'block';
+      }
+    }
+    bufferModeSelect.addEventListener('change', updateBufferModeUI);
+    updateBufferModeUI(); // run on load
+  }
 });
+
+
+
+
+
 
 
 
