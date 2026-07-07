@@ -371,10 +371,46 @@
             <label for="buffer-start-date">시작일자</label>
             <input type="date" id="buffer-start-date" class="select-control" value="2026-07-15">
           </div>
-          <div>
-            <label for="buffer-start-time">발행 시간</label>
-            <input type="time" id="buffer-start-time" class="select-control" value="08:30">
+          <!-- 발행 시간 모드 선택 -->
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label>⏰ 발행 시간 설정</label>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+
+              <!-- 옵션 1: 시간 직접 지정 -->
+              <label for="time-mode-fixed" style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--panel-border); background: rgba(255,255,255,0.03); transition: background 0.2s;">
+                <input type="radio" id="time-mode-fixed" name="buffer-time-mode" value="fixed" checked style="accent-color: var(--point-color); width: 14px; height: 14px;">
+                <span style="font-size: 12px; font-weight: bold;">🕐 특정 시간 직접 지정</span>
+              </label>
+
+              <!-- 옵션 2: 출근시간 랜덤 -->
+              <label for="time-mode-morning" style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--panel-border); background: rgba(255,255,255,0.03); transition: background 0.2s;">
+                <input type="radio" id="time-mode-morning" name="buffer-time-mode" value="morning" style="accent-color: var(--point-color); width: 14px; height: 14px;">
+                <div>
+                  <div style="font-size: 12px; font-weight: bold;">🌅 출근 시간대 랜덤</div>
+                  <div style="font-size: 9px; color: var(--text-secondary);">오전 8:00 ~ 10:00 사이 랜덤</div>
+                </div>
+              </label>
+
+              <!-- 옵션 3: 퇴근시간 랜덤 -->
+              <label for="time-mode-evening" style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--panel-border); background: rgba(255,255,255,0.03); transition: background 0.2s;">
+                <input type="radio" id="time-mode-evening" name="buffer-time-mode" value="evening" style="accent-color: var(--point-color); width: 14px; height: 14px;">
+                <div>
+                  <div style="font-size: 12px; font-weight: bold;">🌆 퇴근 시간대 랜덤</div>
+                  <div style="font-size: 9px; color: var(--text-secondary);">오후 5:00 ~ 7:00 사이 랜덤</div>
+                </div>
+              </label>
+            </div>
+
+            <!-- 직접 지정 시 시간 입력창 (fixed 모드일 때만 표시) -->
+            <div id="buffer-fixed-time-wrap">
+              <input type="time" id="buffer-start-time" class="select-control" value="08:30">
+            </div>
+            <!-- 랜덤 모드 안내 -->
+            <div id="buffer-random-time-notice" style="display: none; font-size: 9px; color: var(--text-secondary); background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 6px; padding: 8px; line-height: 1.5;">
+              💡 각 건마다 해당 시간대 내 무작위 분(分)으로 예약됩니다.<br>자연스러운 발행처럼 보이는 효과가 있습니다.
+            </div>
           </div>
+
           
           <!-- ordering & frequency customizer settings -->
           <div style="border-top: 1px dashed var(--panel-border); margin-top: 10px; padding-top: 10px; display: flex; gap: 8px;">

@@ -2455,14 +2455,22 @@ async function scheduleAllCardsToBuffer() {
   const token = document.getElementById("buffer-token-input").value.trim();
   const channelId = document.getElementById("buffer-channel-select").value;
   const startDateVal = document.getElementById("buffer-start-date").value;
-  const startTimeVal = document.getElementById("buffer-start-time").value;
   const scheduleBtn = document.getElementById("buffer-schedule-all-btn");
   const activeControls = document.getElementById("buffer-active-controls");
   const pauseBtn = document.getElementById("buffer-pause-btn");
   const resumeBtn = document.getElementById("buffer-resume-btn");
 
-  if (!token || !channelId || !startDateVal || !startTimeVal) {
+  // Read time mode from radio buttons
+  const timeModeEl = document.querySelector('input[name="buffer-time-mode"]:checked');
+  const timeMode = timeModeEl ? timeModeEl.value : 'fixed'; // 'fixed' | 'morning' | 'evening'
+  const startTimeVal = document.getElementById("buffer-start-time").value;
+
+  if (!token || !channelId || !startDateVal) {
     alert("인증 토큰, 채널, 시작 일정 등을 모두 확인해 주세요.");
+    return;
+  }
+  if (timeMode === 'fixed' && !startTimeVal) {
+    alert("직접 지정 모드에서는 발행 시간을 입력해 주세요.");
     return;
   }
 
@@ -2611,12 +2619,32 @@ async function scheduleAllCardsToBuffer() {
 
       if (shouldCancelScheduler) break;
 
-      // 3. Offset calculations
-      const localDateStr = `${startDateVal}T${startTimeVal}:00+09:00`;
-      const dateObj = new Date(localDateStr);
-      
-      let daysOffset = 0;
+      // 3. Offset + time calculations
       const stepCount = t - startIdx;
+
+      // Determine random or fixed time for this topic
+      let topicHour, topicMin;
+      if (timeMode === 'morning') {
+        // 오전 8:00 ~ 9:59 사이 랜덤
+        topicHour = 8 + Math.floor(Math.random() * 2);       // 8 또는 9
+        topicMin  = Math.floor(Math.random() * 60);           // 0~59
+      } else if (timeMode === 'evening') {
+        // 오후 5:00 ~ 6:59 사이 랜덤
+        topicHour = 17 + Math.floor(Math.random() * 2);      // 17 또는 18
+        topicMin  = Math.floor(Math.random() * 60);           // 0~59
+      } else {
+        // 직접 지정 고정 시간
+        const [h, m] = startTimeVal.split(':').map(Number);
+        topicHour = h;
+        topicMin  = m;
+      }
+
+      const hourStr = String(topicHour).padStart(2, '0');
+      const minStr  = String(topicMin).padStart(2, '0');
+      const localDateStr = `${startDateVal}T${hourStr}:${minStr}:00+09:00`;
+      const dateObj = new Date(localDateStr);
+
+      let daysOffset = 0;
       if (frequency === "1d") {
         daysOffset = stepCount;
       } else if (frequency === "15d") {
@@ -2626,6 +2654,11 @@ async function scheduleAllCardsToBuffer() {
       }
       dateObj.setDate(dateObj.getDate() + daysOffset);
       const dueAtISO = dateObj.toISOString();
+
+      const timeModeLabel = timeMode === 'morning' ? `출근 랜덤 ${hourStr}:${minStr}` :
+                            timeMode === 'evening' ? `퇴근 랜덤 ${hourStr}:${minStr}` :
+                            `고정 ${hourStr}:${minStr}`;
+      bufferLog(`  - ⏰ 발행 시각: ${timeModeLabel} (${dueAtISO.slice(0,16)})`);
 
       // Build caption text from topic data directly (no external variable dependency)
       const captionLines = [];
@@ -4148,6 +4181,40 @@ document.addEventListener('DOMContentLoaded', () => {
     bufferModeSelect.addEventListener('change', updateBufferModeUI);
     updateBufferModeUI(); // run on load
   }
+
+  // =============================================================
+  // BUFFER TIME MODE TOGGLE: show/hide fixed time input vs. notice
+  // =============================================================
+  const timeModeRadios = document.querySelectorAll('input[name="buffer-time-mode"]');
+  const fixedTimeWrap = document.getElementById('buffer-fixed-time-wrap');
+  const randomTimeNotice = document.getElementById('buffer-random-time-notice');
+
+  function updateTimeModeUI() {
+    const selected = document.querySelector('input[name="buffer-time-mode"]:checked');
+    const mode = selected ? selected.value : 'fixed';
+    if (mode === 'fixed') {
+      if (fixedTimeWrap)   fixedTimeWrap.style.display = 'block';
+      if (randomTimeNotice) randomTimeNotice.style.display = 'none';
+    } else {
+      if (fixedTimeWrap)   fixedTimeWrap.style.display = 'none';
+      if (randomTimeNotice) randomTimeNotice.style.display = 'block';
+    }
+    // Also highlight the selected radio label
+    document.querySelectorAll('label[for^="time-mode-"]').forEach(lbl => {
+      lbl.style.borderColor = 'var(--panel-border)';
+      lbl.style.background = 'rgba(255,255,255,0.03)';
+    });
+    if (selected) {
+      const selectedLabel = document.querySelector(`label[for="${selected.id}"]`);
+      if (selectedLabel) {
+        selectedLabel.style.borderColor = 'var(--point-color)';
+        selectedLabel.style.background = 'rgba(255,193,7,0.07)';
+      }
+    }
+  }
+
+  timeModeRadios.forEach(radio => radio.addEventListener('change', updateTimeModeUI));
+  updateTimeModeUI(); // run on load
 });
 
 
