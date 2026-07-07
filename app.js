@@ -2627,11 +2627,29 @@ async function scheduleAllCardsToBuffer() {
       dateObj.setDate(dateObj.getDate() + daysOffset);
       const dueAtISO = dateObj.toISOString();
 
-      // Use dynamic fallback capKey if not matched exactly
-      const capKey = (topic.id % 12) || 12;
-      const defaultCap = scheduleCalendar[capKey] || `${topic.title}\n\n트라밸 올인원 자유패키지로 가볍게 떠나는 여행!`;
-      const defaultHash = hashtags[capKey] || "#해외여행 #자유여행 #패키지여행 #트라밸";
-      const captionText = `${defaultCap}\n\n${defaultHash}`;
+      // Build caption text from topic data directly (no external variable dependency)
+      const captionLines = [];
+      captionLines.push(topic.title || '');
+      if (topic.subtitle) captionLines.push(topic.subtitle);
+      captionLines.push('');
+      captionLines.push('트라밸 올인원 자유패키지로 가볍게 떠나는 여행!');
+      captionLines.push('📌 프로필 링크에서 상담 신청 가능합니다.');
+      captionLines.push('');
+
+      // Hashtag set based on country
+      const countryHashtags = {
+        vietnam: '#베트남여행 #다낭여행 #호이안 #베트남자유여행 #트라밸',
+        thailand: '#태국여행 #방콕여행 #파타야 #태국자유여행 #트라밸',
+        laos: '#라오스여행 #비엔티안 #루앙프라방 #라오스자유여행 #트라밸',
+        philippines: '#필리핀여행 #세부여행 #보라카이 #필리핀자유여행 #트라밸',
+        japan: '#일본여행 #도쿄여행 #오사카 #일본자유여행 #트라밸',
+        china: '#중국여행 #상하이여행 #베이징 #중국자유여행 #트라밸',
+        korea: '#한국여행 #서울여행 #제주도 #국내여행 #트라밸'
+      };
+      const hashtagStr = countryHashtags[topic.country] || '#해외여행 #자유여행 #패키지여행 #트라밸 #해외패키지';
+      captionLines.push(hashtagStr);
+
+      const captionText = captionLines.join('\n');
 
       bufferLog(`  - [슬라이드 전체] Buffer GraphQL API 등록 요청 중...`);
       const assetsInput = imageUrls.map(url => `          { image: { url: "${url}" } }`).join("\n");
