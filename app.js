@@ -2486,31 +2486,17 @@ async function scheduleAllCardsToBuffer() {
     return;
   }
 
-  // Single-batch mode: use start~end range as the primary scope.
-  // singleCount acts as an ADDITIONAL upper limit if smaller than the range.
-  let isSingleBatch = (bufferMode === "single");
-  let singleCount = endIdx - startIdx + 1; // default: full range
-  if (isSingleBatch) {
-    const inputCount = parseInt(document.getElementById("buffer-single-count").value, 10);
-    if (!isNaN(inputCount) && inputCount > 0 && inputCount < (endIdx - startIdx + 1)) {
-      // Count is smaller than range → clamp endIdx to count
-      singleCount = Math.min(inputCount, 100);
-      endIdx = startIdx + singleCount - 1;
-    } else {
-      // Count >= range size or invalid → use full range
-      singleCount = endIdx - startIdx + 1;
-    }
-  }
+  // 단건 발행 = 지정 범위(start~end)를 딱 한 번 실행하고 종료
+  // 반복 예약 = 설정한 간격(1d/15d/30d)으로 계속 발행
+  const isSingleBatch = (bufferMode === "single");
+  // endIdx is already set from the start/end inputs above — no override needed
 
   const frequency = isSingleBatch ? "1d" : bufferMode;
   const totalToSchedule = endIdx - startIdx + 1;
 
-  let modeLabel;
-  if (isSingleBatch) {
-    modeLabel = `단건 지정 ${totalToSchedule}건 발행 후 자동 종료`;
-  } else {
-    modeLabel = frequency === "1d" ? "매일 1건" : (frequency === "15d" ? "매월 2건 (15일 간격)" : "매월 1건 (30일 간격)");
-  }
+  const modeLabel = isSingleBatch
+    ? `단건 발행 (${totalToSchedule}건 예약 후 종료)`
+    : (frequency === "1d" ? "매일 1건 반복 예약" : (frequency === "15d" ? "매월 2건 반복 (15일 간격)" : "매월 1건 반복 (30일 간격)"));
 
   const confirmMsg = `주제 번호 ${startIdx + 1}번부터 ${endIdx + 1}번까지 총 ${totalToSchedule}개 카드뉴스를\n${startDateVal}일부터 [${modeLabel}] 으로\nBuffer에 발행 예약을 등록하시겠습니까?`;
   if (!confirm(confirmMsg)) return;
