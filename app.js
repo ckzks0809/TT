@@ -2486,23 +2486,28 @@ async function scheduleAllCardsToBuffer() {
     return;
   }
 
-  // Single-batch: clamp endIdx based on count input
+  // Single-batch mode: use start~end range as the primary scope.
+  // singleCount acts as an ADDITIONAL upper limit if smaller than the range.
   let isSingleBatch = (bufferMode === "single");
-  let singleCount = 1;
+  let singleCount = endIdx - startIdx + 1; // default: full range
   if (isSingleBatch) {
-    singleCount = parseInt(document.getElementById("buffer-single-count").value, 10) || 1;
-    if (singleCount < 1) singleCount = 1;
-    if (singleCount > 100) singleCount = 100;
-    // Limit endIdx so we only process `singleCount` topics from startIdx
-    endIdx = Math.min(startIdx + singleCount - 1, topicsData.length - 1);
+    const inputCount = parseInt(document.getElementById("buffer-single-count").value, 10);
+    if (!isNaN(inputCount) && inputCount > 0 && inputCount < (endIdx - startIdx + 1)) {
+      // Count is smaller than range → clamp endIdx to count
+      singleCount = Math.min(inputCount, 100);
+      endIdx = startIdx + singleCount - 1;
+    } else {
+      // Count >= range size or invalid → use full range
+      singleCount = endIdx - startIdx + 1;
+    }
   }
 
-  const frequency = isSingleBatch ? "1d" : bufferMode; // single batch uses 1d interval by default
+  const frequency = isSingleBatch ? "1d" : bufferMode;
   const totalToSchedule = endIdx - startIdx + 1;
 
   let modeLabel;
   if (isSingleBatch) {
-    modeLabel = `단건 지정 ${singleCount}건 발행 후 자동 종료`;
+    modeLabel = `단건 지정 ${totalToSchedule}건 발행 후 자동 종료`;
   } else {
     modeLabel = frequency === "1d" ? "매일 1건" : (frequency === "15d" ? "매월 2건 (15일 간격)" : "매월 1건 (30일 간격)");
   }
