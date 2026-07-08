@@ -230,10 +230,29 @@
       <div class="control-section">
         <h3><i class="fa-solid fa-briefcase"></i> 광고주 기본 특징 설정</h3>
         <div class="control-row" style="display: flex; flex-direction: column; gap: 8px;">
-          <div>
-            <label for="adv-brand-name" style="font-size: 10px; color: var(--text-secondary); display: block; margin-bottom: 4px;">광고주/브랜드 이름</label>
-            <input type="text" id="adv-brand-name" class="select-control" style="width: 100%; padding: 6px 8px; border-radius: 4px; background: #1a1b24; color: #fff; border: 1px solid var(--panel-border); font-size: 11px;" value="트라밸">
+
+          <!-- 브랜드명 (카드 헤더 + 하단 로고에 표시) -->
+          <div style="background: rgba(255,193,7,0.06); border: 1px solid rgba(255,193,7,0.25); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; gap: 6px;">
+            <label for="brand-name-input" style="font-size: 11px; font-weight: bold; color: var(--text-primary); display: block;">
+              🏷️ 브랜드명
+            </label>
+            <input type="text" id="brand-name-input" class="select-control" style="width: 100%; padding: 6px 8px; border-radius: 4px; background: #1a1b24; color: #fff; border: 1px solid rgba(255,193,7,0.4); font-size: 13px; font-weight: bold;" value="TLABAL" placeholder="예: TLABAL">
+            <div style="font-size: 9px; color: var(--text-secondary); line-height: 1.5;">
+              💡 카드 상단 헤더(예: <b>TLABAL</b> INSIGHTS)와 하단 브랜드 로고에 동시 반영됩니다.
+            </div>
           </div>
+
+          <!-- 광고주명 (카드 콘텐츠 내용에 표시) -->
+          <div style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.25); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; gap: 6px;">
+            <label for="adv-brand-name" style="font-size: 11px; font-weight: bold; color: var(--text-primary); display: block;">
+              🏢 광고주명 (서비스/업체명)
+            </label>
+            <input type="text" id="adv-brand-name" class="select-control" style="width: 100%; padding: 6px 8px; border-radius: 4px; background: #1a1b24; color: #fff; border: 1px solid rgba(59,130,246,0.4); font-size: 13px; font-weight: bold;" value="트라밸" placeholder="예: 트라밸">
+            <div style="font-size: 9px; color: var(--text-secondary); line-height: 1.5;">
+              💡 카드 콘텐츠 본문 텍스트(제목, 설명, CTA 등)에 광고주 이름으로 반영됩니다.
+            </div>
+          </div>
+
           <div>
             <label for="adv-brand-points" style="font-size: 10px; color: var(--text-secondary); display: block; margin-bottom: 4px;">브랜드 핵심 소구점 (콤마 구분)</label>
             <input type="text" id="adv-brand-points" class="select-control" style="width: 100%; padding: 6px 8px; border-radius: 4px; background: #1a1b24; color: #fff; border: 1px solid var(--panel-border); font-size: 11px;" value="4성급 리조트 무료 연계, 단독 전용 차량 서비스, 흥정 없는 맞춤 스케줄">

@@ -1198,7 +1198,8 @@ const topicsData = [
 // App State
 let currentTopicIndex = 0;
 let instagramHandle = "@tlabal_travel";
-let brandLogoText = "TLABAL";
+let brandLogoText = "TLABAL";  // 하단 로고 텍스트 (brand-logo-input과 동기화)
+let brandNameText = "TLABAL";  // 브랜드명: 카드 헤더 INSIGHTS + 하단 로고 (brand-name-input)
 let showBrandLogo = true;
 
 // Buffer scheduler control state
@@ -1600,7 +1601,7 @@ function loadTopic(index) {
 
       contentHtml = `
         <div class="card-header-light">
-          <span class="card-top-title" style="color: var(--main-color);">TLABAL INSIGHTS</span>
+          <span class="card-top-title" style="color: var(--main-color);">${brandNameText} INSIGHTS</span>
         </div>
         <div class="card-body">
           <h2 class="card-section-title" contenteditable="true">${slide.title}</h2>
@@ -1708,13 +1709,29 @@ function setupEventListeners() {
     });
   }
 
-  // Brand Logo Text input handler
+  // Brand Logo Text input handler (하단 로고 전용 - 브랜드명 입력으로 대체됨)
   const brandInput = document.getElementById("brand-logo-input");
   if (brandInput) {
     brandInput.addEventListener("input", (e) => {
       brandLogoText = e.target.value;
       loadTopic(currentTopicIndex);
     });
+  }
+
+  // Brand Name input handler (🏷️ 브랜드명 - 헤더 INSIGHTS + 하단 로고 동시 반영)
+  const brandNameInput = document.getElementById("brand-name-input");
+  if (brandNameInput) {
+    brandNameInput.addEventListener("input", (e) => {
+      brandNameText = e.target.value || "TLABAL";
+      brandLogoText = brandNameText; // 하단 로고도 동일하게 변경
+      // 기존 brand-logo-input 값도 동기화
+      const logoInput = document.getElementById("brand-logo-input");
+      if (logoInput) logoInput.value = brandNameText;
+      loadTopic(currentTopicIndex);
+    });
+    // 초기값 동기화
+    brandNameText = brandNameInput.value || "TLABAL";
+    brandLogoText = brandNameText;
   }
 
   // Brand Logo Visibility Toggle handler
