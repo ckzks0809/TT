@@ -1616,6 +1616,8 @@ function loadTopic(index) {
         </div>
       `;
     } else if (slide.type === "cta") {
+      // 광고주명 동적 참조 (adv-brand-name 입력값 사용)
+      const advBrandNameForCta = document.getElementById("adv-brand-name")?.value.trim() || "트라밸";
       let guideProfileHtml = "";
       if (slide.hasModel) {
         guideProfileHtml = `
@@ -1624,7 +1626,7 @@ function loadTopic(index) {
               <div class="model-photo-element" style="background-image: url('${modelSrc}'); width: 100%; height: 100%; background-size: cover; background-position: center; border-radius: 50%;"></div>
             </div>
             <div class="avatar-circle-info" contenteditable="true">
-              안녕하세요, <b>트라밸 플래너 민지</b>입니다.<br>
+              안녕하세요, <b>${advBrandNameForCta} 플래너</b>입니다.<br>
               지친 일상을 보상할 최적의 힐링 자유여행 패키지를 설계해 드려요!
             </div>
           </div>
