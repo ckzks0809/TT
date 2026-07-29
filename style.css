@@ -756,10 +756,32 @@ header {
 .split-column-item {
   flex: 1;
   background: white;
-  padding: 35px 25px;
+  padding: 25px 20px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.col-photo-box {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.checklist-photo-box {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .col-icon {

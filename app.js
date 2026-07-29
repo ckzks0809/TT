@@ -6,1108 +6,1457 @@
 // 12 Topics Data (Each expanded to 6 slides, Slide 4 customized with country/topic specific hook, CTA button customized to Comment-to-DM)
 const topicsData = [
   {
-    id: 1,
-    country: "vietnam",
-    countryName: "베트남",
-    mainColor: "#A6373D",
-    pointColor: "#D9A441",
-    badge: "VIETNAM",
-    title: "베트남 자유여행, 트라밸 하나면 끝",
-    slides: [
+    "id": 1,
+    "country": "vietnam",
+    "countryName": "베트남",
+    "mainColor": "#A6373D",
+    "pointColor": "#D9A441",
+    "badge": "VIETNAM",
+    "title": "베트남 자유여행, 트라밸 하나면 끝",
+    "slides": [
       {
-        type: "cover",
-        title: "베트남 여행,<br>어디로 갈지 고민되시나요?",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "VIETNAM",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "베트남 여행,<br>어디로 갈지 고민되시나요?",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "VIETNAM",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "한눈에 비교하는 대표 3개 도시",
-        subtitle: "나에게 꼭 맞는 베트남 여행지 찾기",
-        layout: "city-detail",
-        hasModel: false,
-        stepIndicator: "도시별 특징 한눈에 보기",
-        textContent: "<b>01 다낭:</b> 휴양과 도심을 동시에 즐기는 곳<br><b>02 나트랑:</b> 에메랄드빛 휴양 천국<br><b>03 푸꾸옥:</b> 프라이빗 청정 힐링 섬",
-        photoUrl: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1080&q=80"
+        "type": "content",
+        "title": "한눈에 비교하는 대표 3개 도시",
+        "subtitle": "나에게 꼭 맞는 베트남 여행지 찾기",
+        "layout": "city-detail",
+        "hasModel": false,
+        "stepIndicator": "도시별 특징 한눈에 보기",
+        "textContent": "<b>01 다낭:</b> 휴양과 도심을 동시에 즐기는 곳<br><b>02 나트랑:</b> 에메랄드빛 휴양 천국<br><b>03 푸꾸옥:</b> 프라이빗 청정 힐링 섬",
+        "photoUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "숙소부터 투어까지 한 번에",
-        subtitle: "이동수단 걱정 없이 올인원 구성",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?auto=format&fit=crop&w=1080&q=80",
-        textContent: "여러 사이트에서 헤매지 마세요! 제휴 리조트와 전용 차량, 로컬 프라이빗 투어를 하나로 묶어 복잡한 여행 준비를 끝내드립니다."
+        "type": "content",
+        "title": "숙소부터 투어까지 한 번에",
+        "subtitle": "이동수단 걱정 없이 올인원 구성",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "여러 사이트에서 헤매지 마세요! 제휴 리조트와 전용 차량, 로컬 프라이빗 투어를 하나로 묶어 복잡한 여행 준비를 끝내드립니다."
       },
       {
-        type: "content",
-        title: "베트남 현지 필수 3대 미식 탐방",
-        subtitle: "입안 가득 퍼지는 맛있는 힐링",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 진한 현지 쌀국수", desc: "깊은 진국의 풍미가 일품인 로컬 쌀국수" },
-          { title: "02 겉바속촉 반미", desc: "신선한 재료가 듬뿍 들어간 베트남 바게트" },
-          { title: "03 에그커피 & 코코넛스무디", desc: "달콤하고 부드러운 현지 시그니처 음료" }
+        "type": "content",
+        "title": "베트남 현지 필수 3대 미식 탐방",
+        "subtitle": "입안 가득 퍼지는 맛있는 힐링",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 진한 현지 쌀국수",
+            "desc": "깊은 진국의 풍미가 일품인 로컬 쌀국수",
+            "photoUrl": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 겉바속촉 반미",
+            "desc": "신선한 재료가 듬뿍 들어간 베트남 바게트",
+            "photoUrl": "https://images.unsplash.com/photo-1626804475297-41607e074eb1?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 에그커피 & 코코넛스무디",
+            "desc": "달콤하고 부드러운 현지 시그니처 음료",
+            "photoUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "현지 안심 여행 필수 꿀팁",
-        subtitle: "알아두면 유용한 베트남 여행 정보",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "그랩(Grab) 앱 사전 설치 및 카드 등록 필수", checked: true },
-          { label: "동(VND) 환전은 100달러 신권 지폐 활용", checked: true },
-          { label: "생수는 반드시 구입한 삼다수/지정 생수 마시기", checked: true }
+        "type": "content",
+        "title": "현지 안심 여행 필수 꿀팁",
+        "subtitle": "알아두면 유용한 베트남 여행 정보",
+        "layout": "checklist",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+        "checklistItems": [
+          {
+            "label": "그랩(Grab) 앱 사전 설치 및 카드 등록 필수",
+            "checked": true
+          },
+          {
+            "label": "동(VND) 환전은 100달러 신권 지폐 활용",
+            "checked": true
+          },
+          {
+            "label": "생수는 반드시 구입한 삼다수/지정 생수 마시기",
+            "checked": true
+          }
         ]
       },
       {
-        type: "cta",
-        title: "세 도시 모두 트라밸 하나로",
-        subtitle: "지금 나에게 맞는 도시 찾기",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남겨서 특별 플랜 받기"
+        "type": "cta",
+        "title": "세 도시 모두 트라밸 하나로",
+        "subtitle": "지금 나에게 맞는 도시 찾기",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남겨서 특별 플랜 받기"
       }
     ]
   },
   {
-    id: 2,
-    country: "vietnam",
-    countryName: "베트남",
-    mainColor: "#A6373D",
-    pointColor: "#D9A441",
-    badge: "DANANG & NHATRANG",
-    title: "다낭 vs 나트랑, 어디가 나한테 맞을까?",
-    slides: [
+    "id": 2,
+    "country": "vietnam",
+    "countryName": "베트남",
+    "mainColor": "#A6373D",
+    "pointColor": "#D9A441",
+    "badge": "DANANG & NHATRANG",
+    "title": "다낭 vs 나트랑, 어디가 나한테 맞을까?",
+    "slides": [
       {
-        type: "cover",
-        title: "다낭 vs 나트랑,<br>완벽 비교 가이드",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "DANANG vs NHATRANG",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "다낭 vs 나트랑,<br>완벽 비교 가이드",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "DANANG vs NHATRANG",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "다낭: 가족 여행과 호이안 안성맞춤",
-        subtitle: "유네스코 등재 고풍스러운 유적과 바나힐",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1080&q=80",
-        textContent: "세계 6대 미케비치 해변과 옛 멋을 간직한 호이안 등불 거리를 한 번에 경험하세요."
+        "type": "content",
+        "title": "다낭: 가족 여행과 호이안 안성맞춤",
+        "subtitle": "유네스코 등재 고풍스러운 유적과 바나힐",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "세계 6대 미케비치 해변과 옛 멋을 간직한 호이안 등불 거리를 한 번에 경험하세요."
       },
       {
-        type: "content",
-        title: "나트랑: 해양 스포츠와 럭셔리 호캉스",
-        subtitle: "동양의 나폴리로 불리는 휴양 천국",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80",
-        textContent: "에메랄드빛 바다에서 즐기는 스노클링과 프라이빗 5성급 리조트의 평화로운 휴식을 즐기세요."
+        "type": "content",
+        "title": "나트랑: 해양 스포츠와 럭셔리 호캉스",
+        "subtitle": "동양의 나폴리로 불리는 휴양 천국",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "에메랄드빛 바다에서 즐기는 스노클링과 프라이빗 5성급 리조트의 평화로운 휴식을 즐기세요."
       },
       {
-        type: "content",
-        title: "다낭·나트랑 꼭 맛봐야 할 먹거리",
-        subtitle: "입맛 사로잡는 로컬 미식 모음",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 바삭한 반세오", desc: "야채와 라이스페이퍼에 싸먹는 부침개" },
-          { title: "02 해산물 바비큐", desc: "갓 잡은 싱싱한 랍스터와 가리비 구이" },
-          { title: "03 분짜 & 분뽀후에", desc: "숯불 고기 풍미가 가득한 전통 국수" }
+        "type": "content",
+        "title": "다낭·나트랑 꼭 맛봐야 할 먹거리",
+        "subtitle": "입맛 사로잡는 로컬 미식 모음",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 바삭한 반세오",
+            "desc": "야채와 라이스페이퍼에 싸먹는 부침개",
+            "photoUrl": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 해산물 바비큐",
+            "desc": "갓 잡은 싱싱한 랍스터와 가리비 구이",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 분짜 & 분뽀후에",
+            "desc": "숯불 고기 풍미가 가득한 전통 국수",
+            "photoUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "인생샷 남기는 야경 & 해변 카페",
-        subtitle: "감성 가득한 밤의 매력 정복",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "호이안 올드타운 투본강 소원배 야경 체험", checked: true },
-          { label: "나트랑 세일링클럽 석양 일몰 칵테일 타임", checked: true },
-          { label: "다낭 용다리 불쇼 감상 루프탑바 방문", checked: true }
+        "type": "content",
+        "title": "인생샷 남기는 야경 & 해변 카페",
+        "subtitle": "감성 가득한 밤의 매력 정복",
+        "layout": "checklist",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80",
+        "checklistItems": [
+          {
+            "label": "호이안 올드타운 투본강 소원배 야경 체험",
+            "checked": true
+          },
+          {
+            "label": "나트랑 세일링클럽 석양 일몰 칵테일 타임",
+            "checked": true
+          },
+          {
+            "label": "다낭 용다리 불쇼 감상 루프탑바 방문",
+            "checked": true
+          }
         ]
       },
       {
-        type: "cta",
-        title: "고민 끝, 선택은 자유롭게",
-        subtitle: "다낭·나트랑·푸꾸옥, 한 번의 예약으로 자유 이동",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 추천 도시 DM 받기"
+        "type": "cta",
+        "title": "고민 끝, 선택은 자유롭게",
+        "subtitle": "다낭·나트랑·푸꾸옥, 한 번의 예약으로 자유 이동",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 추천 도시 DM 받기"
       }
     ]
   },
   {
-    id: 3,
-    country: "vietnam",
-    countryName: "베트남",
-    mainColor: "#A6373D",
-    pointColor: "#D9A441",
-    badge: "PHU QUOC",
-    title: "푸꾸옥, 베트남 숨은 보석 휴양지",
-    slides: [
+    "id": 3,
+    "country": "vietnam",
+    "countryName": "베트남",
+    "mainColor": "#A6373D",
+    "pointColor": "#D9A441",
+    "badge": "PHU QUOC",
+    "title": "푸꾸옥, 베트남 숨은 보석 휴양지",
+    "slides": [
       {
-        type: "cover",
-        title: "에메랄드빛 숨은 보석,<br>베트남 푸꾸옥",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "PHU QUOC",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "에메랄드빛 숨은 보석,<br>베트남 푸꾸옥",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "PHU QUOC",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "세계 최고의 석양을 자랑하는 힐링 섬",
-        subtitle: "온전한 휴식만을 위한 최고의 선택",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80",
-        textContent: "붉게 물드는 선셋 바다와 조용한 프라이빗 비치에서 누구에게도 방해받지 않는 휴식을 누리세요."
+        "type": "content",
+        "title": "세계 최고의 석양을 자랑하는 힐링 섬",
+        "subtitle": "온전한 휴식만을 위한 최고의 선택",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "붉게 물드는 선셋 바다와 조용한 프라이빗 비치에서 누구에게도 방해받지 않는 휴식을 누리세요."
       },
       {
-        type: "content",
-        title: "세계 최장 해상 케이블카 & 사파리",
-        subtitle: "남녀노소 누구나 즐거운 스페셜 코스",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1080&q=80",
-        textContent: "바다 위를 나는 혼똠섬 케이블카와 야생 동물을 만나는 빈원더스 사파리투어가 준비되어 있습니다."
+        "type": "content",
+        "title": "세계 최장 해상 케이블카 & 사파리",
+        "subtitle": "남녀노소 누구나 즐거운 스페셜 코스",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "바다 위를 나는 혼똠섬 케이블카와 야생 동물을 만나는 빈원더스 사파리투어가 준비되어 있습니다."
       },
       {
-        type: "content",
-        title: "푸꾸옥 야시장 미식 & 해산물 특선",
-        subtitle: "밤을 즐겁게 만드는 시장 먹거리",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 성게 구이", desc: "고소한 견과류와 파기름을 얹은 성게" },
-          { title: "02 오징어 오징어구이", desc: "특제 양념을 발라 숯불에 구운 오징어" },
-          { title: "03 코코넛 아이스크림", desc: "생코코넛 용기에 담긴 달콤한 디저트" }
+        "type": "content",
+        "title": "푸꾸옥 야시장 미식 & 해산물 특선",
+        "subtitle": "밤을 즐겁게 만드는 시장 먹거리",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 성게 구이",
+            "desc": "고소한 견과류와 파기름을 얹은 성게",
+            "photoUrl": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 오징어 구이",
+            "desc": "특제 양념을 발라 숯불에 구운 오징어",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 코코넛 아이스크림",
+            "desc": "생코코넛 용기에 담긴 달콤한 디저트",
+            "photoUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "푸꾸옥 스마트 알짜 여행 팁",
-        subtitle: "더 완벽하게 즐기는 방법",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "북부 빈원더스 vs 남부 썬월드 동선 구분", checked: true },
-          { label: "진주 농장 및 킹콩마트 특산품 쇼핑", checked: true },
-          { label: "선셋 산나토 비치 클럽 일몰 타임 맞추기", checked: true }
+        "type": "content",
+        "title": "푸꾸옥 스마트 알짜 여행 팁",
+        "subtitle": "더 완벽하게 즐기는 방법",
+        "layout": "checklist",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+        "checklistItems": [
+          {
+            "label": "북부 빈원더스 vs 남부 썬월드 동선 구분",
+            "checked": true
+          },
+          {
+            "label": "진주 농장 및 킹콩마트 특산품 쇼핑",
+            "checked": true
+          },
+          {
+            "label": "선셋 산나토 비치 클럽 일몰 타임 맞추기",
+            "checked": true
+          }
         ]
       },
       {
-        type: "cta",
-        title: "정확한 견적이 궁금하다면?",
-        subtitle: "지금 바로 1:1 맞춤 상담 받아보기",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 상세 견적서 받기"
+        "type": "cta",
+        "title": "정확한 견적이 궁금하다면?",
+        "subtitle": "지금 바로 1:1 맞춤 상담 받아보기",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 상세 견적서 받기"
       }
     ]
   },
   {
-    id: 4,
-    country: "vietnam",
-    countryName: "베트남",
-    mainColor: "#A6373D",
-    pointColor: "#D9A441",
-    badge: "CHECKLIST",
-    title: "베트남 여행 전 체크리스트 TOP 5",
-    slides: [
+    "id": 4,
+    "country": "vietnam",
+    "countryName": "베트남",
+    "mainColor": "#A6373D",
+    "pointColor": "#D9A441",
+    "badge": "CHECKLIST",
+    "title": "베트남 여행 전 체크리스트 TOP 5",
+    "slides": [
       {
-        type: "cover",
-        title: "베트남 가기 전,<br>이것만 챙기면 완벽!",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "CHECKLIST",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "베트남 가기 전,<br>이것만 챙기면 완벽!",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "CHECKLIST",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "필수 준비물 3가지",
-        subtitle: "출발 전 꼭 확인해야 할 항목",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "여권 만료일 6개월 이상 남았는지 확인", checked: true },
-          { label: "e-SIM 또는 포켓 와이파이 사전 예약", checked: true },
-          { label: "여행자 보험 가입 및 긴급 연락처 저장", checked: true }
+        "type": "content",
+        "title": "필수 준비물 3가지",
+        "subtitle": "출발 전 꼭 확인해야 할 항목",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "여권 만료일 6개월 이상 남았는지 확인",
+            "checked": true
+          },
+          {
+            "label": "e-SIM 또는 포켓 와이파이 사전 예약",
+            "checked": true
+          },
+          {
+            "label": "여행자 보험 가입 및 긴급 연락처 저장",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "type": "content",
+        "title": "현지 필수 쇼핑 꿀템 3선",
+        "subtitle": "지인 선물로 추천하는 귀국 선물",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 다람쥐 & 코코넛 커피",
+            "desc": "진하고 달콤한 베트남 대표 커피",
+            "photoUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 건망고 & 캐슈넛",
+            "desc": "남녀노소 좋아하는 영양 간식",
+            "photoUrl": "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 아치카페 & 하오하오 라면",
+            "desc": "중독성 있는 현지 인기 기념품",
+            "photoUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "현지 필수 쇼핑 꿀템 3선",
-        subtitle: "지인 선물로 추천하는 귀국 선물",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 다람쥐 & 코코넛 커피", desc: "진하고 달콤한 베트남 대표 커피" },
-          { title: "02 건망고 & 캐슈넛", desc: "남녀노소 좋아하는 영양 간식" },
-          { title: "03 아치카페 & 하오하오 라면", desc: "중독성 있는 현지 인기 기념품" }
+        "type": "content",
+        "title": "베트남 안전 & 교통 꿀팁",
+        "subtitle": "마음 편한 여행을 위한 체크포인트",
+        "layout": "checklist",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+        "checklistItems": [
+          {
+            "label": "길 건널 땐 일정한 속도로 천천히 걷기",
+            "checked": true
+          },
+          {
+            "label": "소매치기 예방을 위해 핸드폰 끈 착용",
+            "checked": true
+          },
+          {
+            "label": "공항 호객 택시 대신 그랩(Grab) 이용하기",
+            "checked": true
+          }
         ]
       },
       {
-        type: "content",
-        title: "베트남 안전 & 교통 꿀팁",
-        subtitle: "마음 편한 여행을 위한 체크포인트",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "길 건널 땐 일정한 속도로 천천히 걷기", checked: true },
-          { label: "소매치기 예방을 위해 핸드폰 끈 착용", checked: true },
-          { label: "공항 호객 택시 대신 그랩(Grab) 이용하기", checked: true }
-        ]
-      },
-      {
-        type: "cta",
-        title: "체크리스트 준비 완료!",
-        subtitle: "트라밸과 함께 안심 여행을 출발해 보세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 태국 특가 DM 받기"
+        "type": "cta",
+        "title": "체크리스트 준비 완료!",
+        "subtitle": "트라밸과 함께 안심 여행을 출발해 보세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 태국 특가 DM 받기"
       }
     ]
   },
   {
-    id: 5,
-    country: "thailand",
-    countryName: "태국",
-    mainColor: "#1B4D3E",
-    pointColor: "#E0A96D",
-    badge: "THAILAND",
-    title: "태국 방콕·푸켓 자유여행 가이드",
-    slides: [
+    "id": 5,
+    "country": "thailand",
+    "countryName": "태국",
+    "mainColor": "#1B4D3E",
+    "pointColor": "#E0A96D",
+    "badge": "THAILAND",
+    "title": "태국 방콕·푸켓 자유여행 가이드",
+    "slides": [
       {
-        type: "cover",
-        title: "화려함과 휴양이 공존하는<br>태국으로의 초대",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "THAILAND",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "화려함과 휴양이 공존하는<br>태국으로의 초대",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "THAILAND",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "방콕 — 화려한 쇼핑 & 미식",
-        subtitle: "24시간 매력이 넘치는 미식과 쇼핑의 도시",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80",
-        textContent: "화려한 왕궁과 아이콘시암 쇼핑몰, 쌥쌥 미식을 원없이 즐기세요."
+        "type": "content",
+        "title": "방콕 — 화려한 쇼핑 & 미식",
+        "subtitle": "24시간 매력이 넘치는 미식과 쇼핑의 도시",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "화려한 왕궁과 아이콘시암 쇼핑몰, 쌥쌥 미식을 원없이 즐기세요."
       },
       {
-        type: "content",
-        title: "푸켓 — 평화롭고 나긋한 힐링",
-        subtitle: "에메랄드빛 안다만해의 휴양지",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1080&q=80",
-        textContent: "피피섬 투어와 리조트 호캉스로 완벽한 힐링을 선사합니다."
+        "type": "content",
+        "title": "푸켓 — 평화롭고 나긋한 힐링",
+        "subtitle": "에메랄드빛 안다만해의 휴양지",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "피피섬 투어와 리조트 호캉스로 완벽한 힐링을 선사합니다."
       },
       {
-        type: "content",
-        title: "태국 3대 대표 미식 탐방",
-        subtitle: "세계가 사랑하는 태국의 맛",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 팟타이", desc: "새콤달콤 볶음 면 요리의 정석" },
-          { title: "02 똠얌꿍", desc: "매콤새콤 중독성 강한 세계 3대 스프" },
-          { title: "03 랭쌉 & 망고찰밥", desc: "비주얼 폭발 등뼈 찜과 달콤한 디저트" }
+        "type": "content",
+        "title": "태국 3대 대표 미식 탐방",
+        "subtitle": "세계가 사랑하는 태국의 맛",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 팟타이",
+            "desc": "새콤달콤 볶음 면 요리의 정석",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 똠얌꿍",
+            "desc": "매콤새콤 중독성 강한 세계 3대 스프",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 랭쌉 & 망고찰밥",
+            "desc": "비주얼 폭발 등뼈 찜과 달콤한 디저트",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "야시장 & 루프탑바 감성 팁",
-        subtitle: "태국 밤문화를 200% 즐기는법",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "조드페어 야시장 랭쌉 시식 동선 확인", checked: true },
-          { label: "반드시 드레스코드 챙겨 루프탑바 방문", checked: true },
-          { label: "GLN 모바일 간편결제 앱 사전 등록하기", checked: true }
-        ]
+        "type": "content",
+        "title": "야시장 & 루프탑바 감성 팁",
+        "subtitle": "태국 밤문화를 200% 즐기는법",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "조드페어 야시장 랭쌉 시식 동선 확인",
+            "checked": true
+          },
+          {
+            "label": "반드시 드레스코드 챙겨 루프탑바 방문",
+            "checked": true
+          },
+          {
+            "label": "GLN 모바일 간편결제 앱 사전 등록하기",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
       },
       {
-        type: "cta",
-        title: "당신의 여행 성향에 맞는 코스는?",
-        subtitle: "트라밸 플래너에게 어울리는 코스 추천받기",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 맞춤 코스 DM 받기"
+        "type": "cta",
+        "title": "당신의 여행 성향에 맞는 코스는?",
+        "subtitle": "트라밸 플래너에게 어울리는 코스 추천받기",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 맞춤 코스 DM 받기"
       }
     ]
   },
   {
-    id: 6,
-    country: "thailand",
-    countryName: "태국",
-    mainColor: "#1B4D3E",
-    pointColor: "#E0A96D",
-    badge: "THAILAND TIPS",
-    title: "태국 여행 준비물 체크리스트",
-    slides: [
+    "id": 6,
+    "country": "thailand",
+    "countryName": "태국",
+    "mainColor": "#1B4D3E",
+    "pointColor": "#E0A96D",
+    "badge": "THAILAND TIPS",
+    "title": "태국 여행 준비물 체크리스트",
+    "slides": [
       {
-        type: "cover",
-        title: "태국 여행 가기 전,<br>이것만은 꼭 챙기세요!",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "THAILAND TIPS",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "태국 여행 가기 전,<br>이것만은 꼭 챙기세요!",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "THAILAND TIPS",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "1단계: 필수 서류 및 환전",
-        subtitle: "출국 전 무조건 체크해야 할 항목",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "여권 유효기간 6개월 이상 필수", checked: true },
-          { label: "바트(THB) 환전 및 GLN 모바일 결제", checked: true }
+        "type": "content",
+        "title": "1단계: 필수 서류 및 환전",
+        "subtitle": "출국 전 무조건 체크해야 할 항목",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "여권 유효기간 6개월 이상 필수",
+            "checked": true
+          },
+          {
+            "label": "바트(THB) 환전 및 GLN 모바일 결제",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "type": "content",
+        "title": "왓아룬 야경 & 툭툭이 이용 팁",
+        "subtitle": "태국 감성을 한껏 만끽하기",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "짜오프라야 강 건너편 야경 카페에서 왓아룬 일몰을 바라보고, 툭툭이 탑승 시 미리 가격 협상을 진행하세요."
+      },
+      {
+        "type": "content",
+        "title": "태국 현지 1일 1마사지 팁",
+        "subtitle": "지친 피로를 풀어주는 힐링 마사지",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 타이 전통 마사지",
+            "desc": "몸 전체의 뭉친 근육을 시원하게 스트레칭",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 아로마 오일 마사지",
+            "desc": "부드러운 향과 함께 피로를 녹여주는 코스",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 발 마사지",
+            "desc": "투어 후 지친 발을 가볍게 케어하는 필수 코스",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "왓아룬 야경 & 툭툭이 이용 팁",
-        subtitle: "태국 감성을 한껏 만끽하기",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1080&q=80",
-        textContent: "짜오프라야 강 건너편 야경 카페에서 왓아룬 일몰을 바라보고, 툭툭이 탑승 시 미리 가격 협상을 진행하세요."
-      },
-      {
-        type: "content",
-        title: "태국 현지 1일 1마사지 팁",
-        subtitle: "지친 피로를 풀어주는 힐링 마사지",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 타이 전통 마사지", desc: "몸 전체의 뭉친 근육을 시원하게 스트레칭" },
-          { title: "02 아로마 오일 마사지", desc: "부드러운 향과 함께 피로를 녹여주는 코스" },
-          { title: "03 발 마사지", desc: "투어 후 지친 발을 가볍게 케어하는 필수 코스" }
-        ]
-      },
-      {
-        type: "cta",
-        title: "준비가 모두 끝나셨나요?",
-        subtitle: "트라밸과 함께 지금 바로 출발해 보세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 체크리스트 PDF 받기"
+        "type": "cta",
+        "title": "준비가 모두 끝나셨나요?",
+        "subtitle": "트라밸과 함께 지금 바로 출발해 보세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 체크리스트 PDF 받기"
       }
     ]
   },
   {
-    id: 7,
-    country: "laos",
-    countryName: "라오스",
-    mainColor: "#2C5282",
-    pointColor: "#ED8936",
-    badge: "LAOS",
-    title: "아직 덜 알려진 라오스, 감성 여행지",
-    slides: [
+    "id": 7,
+    "country": "laos",
+    "countryName": "라오스",
+    "mainColor": "#2C5282",
+    "pointColor": "#ED8936",
+    "badge": "LAOS",
+    "title": "아직 덜 알려진 라오스, 감성 여행지",
+    "slides": [
       {
-        type: "cover",
-        title: "아직 때 묻지 않은,<br>비밀스러운 감성 여행지",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "LAOS",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "아직 때 묻지 않은,<br>비밀스러운 감성 여행지",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "LAOS",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "고요가 흐르는 루앙프라방",
-        subtitle: "유네스코 세계문화유산 도시",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1080&q=80",
-        textContent: "새벽 탁발 의식과 고즈넉한 프랑스풍 건물들이 자아내는 차분한 휴식을 만나보세요."
+        "type": "content",
+        "title": "고요가 흐르는 루앙프라방",
+        "subtitle": "유네스코 세계문화유산 도시",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "새벽 탁발 의식과 고즈넉한 프랑스풍 건물들이 자아내는 차분한 휴식을 만나보세요."
       },
       {
-        type: "content",
-        title: "자연과 액티비티의 천국, 방비엥",
-        subtitle: "젊음과 활기가 넘치는 카르스트 산수",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80",
-        textContent: "블루라군 다이빙과 짚라인, 튜빙으로 자연을 만끽하세요."
+        "type": "content",
+        "title": "자연과 액티비티의 천국, 방비엥",
+        "subtitle": "젊음과 활기가 넘치는 카르스트 산수",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "블루라군 다이빙과 짚라인, 튜빙으로 자연을 만끽하세요."
       },
       {
-        type: "content",
-        title: "라오스 로컬 미식 & 먹거리 3선",
-        subtitle: "소박하지만 깊은 풍미의 맛",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 바게트 샌드위치", desc: "속재료가 터질 듯 푸짐한 방비엥 샌드위치" },
-          { title: "02 까오삐약 (쌀국수)", desc: "쫄깃한 면발과 진한 닭육수의 조화" },
-          { title: "03 신닷 (라오스 BBQ)", desc: "구이와 샤브샤브를 동시에 즐기는 요리" }
+        "type": "content",
+        "title": "라오스 로컬 미식 & 먹거리 3선",
+        "subtitle": "소박하지만 깊은 풍미의 맛",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 바게트 샌드위치",
+            "desc": "속재료가 터질 듯 푸짐한 방비엥 샌드위치",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 까오삐약 (쌀국수)",
+            "desc": "쫄깃한 면발과 진한 닭육수의 조화",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 신닷 (라오스 BBQ)",
+            "desc": "구이와 샤브샤브를 동시에 즐기는 요리",
+            "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "라오스 야시장 쇼핑 & 감성 팁",
-        subtitle: "소소한 즐거움이 가득한 밤",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "루앙프라방 야시장 핸드메이드 동전지갑 구입", checked: true },
-          { label: "메콩강변 코코넛 로티 & 비어라오 한잔", checked: true },
-          { label: "방비엥 남송강 일몰 카약킹 체험", checked: true }
-        ]
+        "type": "content",
+        "title": "라오스 야시장 쇼핑 & 감성 팁",
+        "subtitle": "소소한 즐거움이 가득한 밤",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "루앙프라방 야시장 핸드메이드 동전지갑 구입",
+            "checked": true
+          },
+          {
+            "label": "메콩강변 코코넛 로티 & 비어라오 한잔",
+            "checked": true
+          },
+          {
+            "label": "방비엥 남송강 일몰 카약킹 체험",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
       },
       {
-        type: "cta",
-        title: "남들보다 한발 앞서 라오스를 만나요",
-        subtitle: "트라밸이 추천하는 힐링 루트",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 라오스 비밀 코스 받기"
+        "type": "cta",
+        "title": "남들보다 한발 앞서 라오스를 만나요",
+        "subtitle": "트라밸이 추천하는 힐링 루트",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 라오스 비밀 코스 받기"
       }
     ]
   },
   {
-    id: 8,
-    country: "laos",
-    countryName: "라오스",
-    mainColor: "#2C5282",
-    pointColor: "#ED8936",
-    badge: "LAOS HEALING",
-    title: "라오스 자연 속 힐링 코스",
-    slides: [
+    "id": 8,
+    "country": "laos",
+    "countryName": "라오스",
+    "mainColor": "#2C5282",
+    "pointColor": "#ED8936",
+    "badge": "LAOS HEALING",
+    "title": "라오스 자연 속 힐링 코스",
+    "slides": [
       {
-        type: "cover",
-        title: "온전한 자연 속 힐링,<br>라오스 힐링 투어",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "LAOS HEALING",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "온전한 자연 속 힐링,<br>라오스 힐링 투어",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "LAOS HEALING",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "요정의 연못, 콴시 폭포",
-        subtitle: "에메랄드빛 천연 수영장",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80",
-        textContent: "계단식으로 펼쳐진 석회암 폭포에서 물놀이와 시원한 피서를 즐길 수 있습니다."
+        "type": "content",
+        "title": "요정의 연못, 콴시 폭포",
+        "subtitle": "에메랄드빛 천연 수영장",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "계단식으로 펼쳐진 석회암 폭포에서 물놀이와 시원한 피서를 즐길 수 있습니다."
       },
       {
-        type: "content",
-        title: "메콩강 선셋 크루즈",
-        subtitle: "붉게 물드는 남국의 낭만 일몰",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1080&q=80",
-        textContent: "선상에서 바라보는 메콩강의 웅장한 일몰과 함께 시원한 비어라오를 즐기세요."
+        "type": "content",
+        "title": "메콩강 선셋 크루즈",
+        "subtitle": "붉게 물드는 남국의 낭만 일몰",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "선상에서 바라보는 메콩강의 웅장한 일몰과 함께 시원한 비어라오를 즐기세요."
       },
       {
-        type: "content",
-        title: "방비엥 액티비티 핵심 3선",
-        subtitle: "짜릿함과 자연을 동시에",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 블루라군 다이빙", desc: "나무 위에서 점프하는 청정 에메랄드 다이빙" },
-          { title: "02 버기카 동굴 탐험", desc: "비포장 도로를 신나게 달리는 드라이브" },
-          { title: "03 열기구 투어", desc: "방비엥 카르스트 지형을 하늘에서 한눈에" }
+        "type": "content",
+        "title": "방비엥 액티비티 핵심 3선",
+        "subtitle": "짜릿함과 자연을 동시에",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 블루라군 다이빙",
+            "desc": "나무 위에서 점프하는 청정 에메랄드 다이빙",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 버기카 동굴 탐험",
+            "desc": "비포장 도로를 신나게 달리는 드라이브",
+            "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 열기구 투어",
+            "desc": "방비엥 카르스트 지형을 하늘에서 한눈에",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "cta",
-        title: "일정 고민 없이 떠나는 힐링 투어",
-        subtitle: "트라밸이 제안하는 안심 일정",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 힐링 가이드 받기"
+        "type": "cta",
+        "title": "일정 고민 없이 떠나는 힐링 투어",
+        "subtitle": "트라밸이 제안하는 안심 일정",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 힐링 가이드 받기"
       }
     ]
   },
   {
-    id: 9,
-    country: "laos",
-    countryName: "라오스",
-    mainColor: "#2C5282",
-    pointColor: "#ED8936",
-    badge: "LAOS GUIDE",
-    title: "라오스 여행 이렇게 준비하세요",
-    slides: [
+    "id": 9,
+    "country": "laos",
+    "countryName": "라오스",
+    "mainColor": "#2C5282",
+    "pointColor": "#ED8936",
+    "badge": "LAOS GUIDE",
+    "title": "라오스 여행 이렇게 준비하세요",
+    "slides": [
       {
-        type: "cover",
-        title: "라오스 여행 준비,<br>핵심 가이드 한눈에!",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "LAOS GUIDE",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "라오스 여행 준비,<br>핵심 가이드 한눈에!",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "LAOS GUIDE",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "입국 체크 & 무비자 기간",
-        subtitle: "기본적인 가이드라인 숙지",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "대한민국 국적 30일 무비자 체류 가능", checked: true },
-          { label: "여권 잔여 유효기간 6개월 이상 필수", checked: true }
+        "type": "content",
+        "title": "입국 체크 & 무비자 기간",
+        "subtitle": "기본적인 가이드라인 숙지",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "대한민국 국적 30일 무비자 체류 가능",
+            "checked": true
+          },
+          {
+            "label": "여권 잔여 유효기간 6개월 이상 필수",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "type": "content",
+        "title": "라오스 고속열차(LCR) 이용 팁",
+        "subtitle": "비엔티안-방비엥-루앙프라방 초스피드 이동",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "중라 철도(LCR) 이용 시 이동 시간이 절반 이상 단축됩니다. 사전 예매가 필수입니다."
+      },
+      {
+        "type": "content",
+        "title": "로컬 커피 & 디저트 모음",
+        "subtitle": "볼라벤 고원의 진한 향기",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 에스프레소 연유 커피",
+            "desc": "진한 연유와 아라비카 원두의 깊은 조화",
+            "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 망고 & 바나나 로티",
+            "desc": "달콤한 초콜릿 시럽을 뿌린 팬케이크",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 과일 생스무디",
+            "desc": "망고, 파인애플, 생과일을 갈아 만든 스무디",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "라오스 고속열차(LCR) 이용 팁",
-        subtitle: "비엔티안-방비엥-루앙프라방 초스피드 이동",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=1080&q=80",
-        textContent: "중라 철도(LCR) 이용 시 이동 시간이 절반 이상 단축됩니다. 사전 예매가 필수입니다."
-      },
-      {
-        type: "content",
-        title: "로컬 커피 & 디저트 모음",
-        subtitle: "볼라벤 고원의 진한 향기",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 에스프레소 연유 커피", desc: "진한 연유와 아라비카 원두의 깊은 조화" },
-          { title: "02 망고 & 바나나 로티", desc: "달콤한 초콜릿 시럽을 뿌린 팬케이크" },
-          { title: "03 과일 생스무디", desc: "망고, 파인애플, 생과일을 갈아 만든 스무디" }
-        ]
-      },
-      {
-        type: "cta",
-        title: "라오스 여행 준비의 마침표",
-        subtitle: "트라밸과 함께 스마트하게 출발하세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 꿀팁 가이드 받기"
+        "type": "cta",
+        "title": "라오스 여행 준비의 마침표",
+        "subtitle": "트라밸과 함께 스마트하게 출발하세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 꿀팁 가이드 받기"
       }
     ]
   },
   {
-    id: 10,
-    country: "philippines",
-    countryName: "필리핀",
-    mainColor: "#7B1FA2",
-    pointColor: "#FFD54F",
-    badge: "PHILIPPINES",
-    title: "필리핀 완벽 휴양, 여기가 정답",
-    slides: [
+    "id": 10,
+    "country": "philippines",
+    "countryName": "필리핀",
+    "mainColor": "#7B1FA2",
+    "pointColor": "#FFD54F",
+    "badge": "PHILIPPINES",
+    "title": "필리핀 완벽 휴양, 여기가 정답",
+    "slides": [
       {
-        type: "cover",
-        title: "완벽한 휴양이 필요하다면,<br>필리핀 보홀 & 세부",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "PHILIPPINES",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "완벽한 휴양이 필요하다면,<br>필리핀 보홀 & 세부",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "PHILIPPINES",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "보홀 & 세부 투명한 해변",
-        subtitle: "세계 최고 수준의 해양 청정지역",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80",
-        textContent: "알로나 비치의 화이트 샌드와 세부의 맑은 바다에서 해양 스포츠를 즐겨보세요."
+        "type": "content",
+        "title": "보홀 & 세부 투명한 해변",
+        "subtitle": "세계 최고 수준의 해양 청정지역",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "알로나 비치의 화이트 샌드와 세부의 맑은 바다에서 해양 스포츠를 즐겨보세요."
       },
       {
-        type: "content",
-        title: "럭셔리 5성급 리조트 호캉스",
-        subtitle: "수영장과 전용 비치를 갖춘 힐링 스팟",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1080&q=80",
-        textContent: "풀사이드 바에서 칵테일 한 잔의 여유를 즐기며 피로를 모두 날려버리세요."
+        "type": "content",
+        "title": "럭셔리 5성급 리조트 호캉스",
+        "subtitle": "수영장과 전용 비치를 갖춘 힐링 스팟",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "풀사이드 바에서 칵테일 한 잔의 여유를 즐기며 피로를 모두 날려버리세요."
       },
       {
-        type: "content",
-        title: "필리핀 현지 필수 미식 모음",
-        subtitle: "상큼하고 고소한 남국의 맛",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 생망고 & 망고 쉐이크", desc: "달콤함이 폭발하는 필리핀 대표 과일" },
-          { title: "02 돼지고기 시시그", desc: "철판에 볶아 매콤 고소한 현지 시그니처" },
-          { title: "03 감바스 & 알로나 씨푸드", desc: "갓 잡은 새우와 해산물 바비큐 요리" }
+        "type": "content",
+        "title": "필리핀 현지 필수 미식 모음",
+        "subtitle": "상큼하고 고소한 남국의 맛",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 생망고 & 망고 쉐이크",
+            "desc": "달콤함이 폭발하는 필리핀 대표 과일",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 돼지고기 시시그",
+            "desc": "철판에 볶아 매콤 고소한 현지 시그니처",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 감바스 & 알로나 씨푸드",
+            "desc": "갓 잡은 새우와 해산물 바비큐 요리",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "호핑투어 & 스노클링 주의사항",
-        subtitle: "안전하게 즐기는 바다 속 세상",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "구명조끼 및 스노클링 장비 착용 상태 점검", checked: true },
-          { label: "산호초 보호를 위한 리프 세이프 선크림 사용", checked: true },
-          { label: "고래상어 및 거북이 접근 시 안전거리 유지", checked: true }
-        ]
+        "type": "content",
+        "title": "호핑투어 & 스노클링 주의사항",
+        "subtitle": "안전하게 즐기는 바다 속 세상",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "구명조끼 및 스노클링 장비 착용 상태 점검",
+            "checked": true
+          },
+          {
+            "label": "산호초 보호를 위한 리프 세이프 선크림 사용",
+            "checked": true
+          },
+          {
+            "label": "고래상어 및 거북이 접근 시 안전거리 유지",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
       },
       {
-        type: "cta",
-        title: "꿈꿔왔던 휴양이 지금 시작됩니다",
-        subtitle: "트라밸 프라이빗 호캉스 플랜",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 특별 휴양 플랜 받기"
+        "type": "cta",
+        "title": "꿈꿔왔던 휴양이 지금 시작됩니다",
+        "subtitle": "트라밸 프라이빗 호캉스 플랜",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 특별 휴양 플랜 받기"
       }
     ]
   },
   {
-    id: 11,
-    country: "philippines",
-    countryName: "필리핀",
-    mainColor: "#7B1FA2",
-    pointColor: "#FFD54F",
-    badge: "PHILIPPINES RESORT",
-    title: "필리핀 인기 리조트 TOP3",
-    slides: [
+    "id": 11,
+    "country": "philippines",
+    "countryName": "필리핀",
+    "mainColor": "#7B1FA2",
+    "pointColor": "#FFD54F",
+    "badge": "PHILIPPINES RESORT",
+    "title": "필리핀 인기 리조트 TOP3",
+    "slides": [
       {
-        type: "cover",
-        title: "필리핀 어디로 갈까?<br>인기 TOP 3 리조트 추천",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "PHILIPPINES RESORT",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "필리핀 어디로 갈까?<br>인기 TOP 3 리조트 추천",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "PHILIPPINES RESORT",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "TOP 1. 보홀 헤난 리조트 알로나 비치",
-        subtitle: "알로나 비치 중심에 위치한 최고 인기 리조트",
-        layout: "city-detail",
-        hasModel: false,
-        stepIndicator: "TOP 01",
-        textContent: "대형 인피니티 풀 3개와 화이트 비치가 바로 연결된 보홀 대표 랜드마크 리조트입니다.",
-        photoUrl: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1080&q=80"
+        "type": "content",
+        "title": "TOP 1. 보홀 헤난 리조트 알로나 비치",
+        "subtitle": "알로나 비치 중심에 위치한 최고 인기 리조트",
+        "layout": "city-detail",
+        "hasModel": false,
+        "stepIndicator": "TOP 01",
+        "textContent": "대형 인피니티 풀 3개와 화이트 비치가 바로 연결된 보홀 대표 랜드마크 리조트입니다.",
+        "photoUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "TOP 2. 세부 샹그릴라 막탄 리조트",
-        subtitle: "럭셔리 프라이빗 비치와 어마어마한 정원",
-        layout: "city-detail",
-        hasModel: false,
-        stepIndicator: "TOP 02",
-        textContent: "해양 보호구역 전용 비치를 갖추어 리조트 앞바다에서 곧바로 최고급 스노클링이 가능합니다.",
-        photoUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
+        "type": "content",
+        "title": "TOP 2. 세부 샹그릴라 막탄 리조트",
+        "subtitle": "럭셔리 프라이빗 비치와 어마어마한 정원",
+        "layout": "city-detail",
+        "hasModel": false,
+        "stepIndicator": "TOP 02",
+        "textContent": "해양 보호구역 전용 비치를 갖추어 리조트 앞바다에서 곧바로 최고급 스노클링이 가능합니다.",
+        "photoUrl": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "보홀 & 세부 꼭 들러야 할 명소",
-        subtitle: "리조트 밖에서 만나는 스페셜 명소",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 초콜릿 힐", desc: "1,200여 개의 언덕이 이루는 환상적 비경" },
-          { title: "02 타르시어 안경원숭이", desc: "세계에서 가장 작은 귀여운 안경원숭이" },
-          { title: "03 세부 시티 야경 & 탑스힐", desc: "세부 시내가 한눈에 들어오는 뷰맛집" }
+        "type": "content",
+        "title": "보홀 & 세부 꼭 들러야 할 명소",
+        "subtitle": "리조트 밖에서 만나는 스페셜 명소",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 초콜릿 힐",
+            "desc": "1,200여 개의 언덕이 이루는 환상적 비경",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 타르시어 안경원숭이",
+            "desc": "세계에서 가장 작은 귀여운 안경원숭이",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 세부 시티 야경 & 탑스힐",
+            "desc": "세부 시내가 한눈에 들어오는 뷰맛집",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "TOP 3. 세부 제이파크 아일랜드",
-        subtitle: "워터파크를 갖춘 가족 전용 리조트",
-        layout: "city-detail",
-        hasModel: false,
-        stepIndicator: "TOP 03",
-        textContent: "대형 유수풀과 워터슬라이드, 한국인 전용 인포데스크로 아이 동반 가족 여행에 강력 추천!",
-        photoUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80"
+        "type": "content",
+        "title": "TOP 3. 세부 제이파크 아일랜드",
+        "subtitle": "워터파크를 갖춘 가족 전용 리조트",
+        "layout": "city-detail",
+        "hasModel": false,
+        "stepIndicator": "TOP 03",
+        "textContent": "대형 유수풀과 워터슬라이드, 한국인 전용 인포데스크로 아이 동반 가족 여행에 강력 추천!",
+        "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "cta",
-        title: "원하는 리조트를 선택하세요",
-        subtitle: "트라밸이 제휴 리조트 혜택을 함께 챙겨드립니다",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 리조트 비밀 할인율 받기"
+        "type": "cta",
+        "title": "원하는 리조트를 선택하세요",
+        "subtitle": "트라밸이 제휴 리조트 혜택을 함께 챙겨드립니다",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 리조트 비밀 할인율 받기"
       }
     ]
   },
   {
-    id: 12,
-    country: "philippines",
-    countryName: "필리핀",
-    mainColor: "#7B1FA2",
-    pointColor: "#FFD54F",
-    badge: "PHILIPPINES BUDGET",
-    title: "필리핀 여행 환율/예산 가이드",
-    slides: [
+    "id": 12,
+    "country": "philippines",
+    "countryName": "필리핀",
+    "mainColor": "#7B1FA2",
+    "pointColor": "#FFD54F",
+    "badge": "PHILIPPINES BUDGET",
+    "title": "필리핀 여행 환율/예산 가이드",
+    "slides": [
       {
-        type: "cover",
-        title: "필리핀 여행 예산,<br>얼마나 준비해야 알맞을까?",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "PHILIPPINES BUDGET",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "필리핀 여행 예산,<br>얼마나 준비해야 알맞을까?",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "PHILIPPINES BUDGET",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "필리핀 페소(PHP) 환전 전략",
-        subtitle: "수수료 줄이는 알뜰 환전 팁",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "한국에서 100달러 지폐로 준비 후 현지에서 페소 환전", checked: true },
-          { label: "공항 환전소보다는 세부/보홀 시내 몰(Mall) 환전소 추천", checked: true }
+        "type": "content",
+        "title": "필리핀 페소(PHP) 환전 전략",
+        "subtitle": "수수료 줄이는 알뜰 환전 팁",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "한국에서 100달러 지폐로 준비 후 현지에서 페소 환전",
+            "checked": true
+          },
+          {
+            "label": "공항 환전소보다는 세부/보홀 시내 몰(Mall) 환전소 추천",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "type": "content",
+        "title": "필리핀 필수 쇼핑 선물 3선",
+        "subtitle": "지인들이 대만족하는 귀국 선물",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 조비스 바나나칩",
+            "desc": "달콤 바삭해서 한 번 열면 멈출 수 없는 맛",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 7D 건망고",
+            "desc": "두툼하고 쫄깃한 필리핀 국민 명물 건망고",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 악마의 잼 (코코넛잼)",
+            "desc": "보홀/세부 특산 프리미엄 코코넛 스프레드",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "필리핀 필수 쇼핑 선물 3선",
-        subtitle: "지인들이 대만족하는 귀국 선물",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 조비스 바나나칩", desc: "달콤 바삭해서 한 번 열면 멈출 수 없는 맛" },
-          { title: "02 7D 건망고", desc: "두툼하고 쫄깃한 필리핀 국민 명물 건망고" },
-          { title: "03 악마의 잼 (코코넛잼)", desc: "보홀/세부 특산 프리미엄 코코넛 스프레드" }
-        ]
+        "type": "content",
+        "title": "현지 매너 팁 문화 및 이동 가이드",
+        "subtitle": "미리 알아두는 기분 좋은 매너 팁",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "마사지/룸클리닝 시 50~100페소 에티켓 팁 준비",
+            "checked": true
+          },
+          {
+            "label": "택시 이용 시 미터기 온(Meter on) 확인 또는 그랩 앱 사용",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
       },
       {
-        type: "content",
-        title: "현지 매너 팁 문화 및 이동 가이드",
-        subtitle: "미리 알아두는 기분 좋은 매너 팁",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "마사지/룸클리닝 시 50~100페소 에티켓 팁 준비", checked: true },
-          { label: "택시 이용 시 미터기 온(Meter on) 확인 또는 그랩 앱 사용", checked: true }
-        ]
-      },
-      {
-        type: "cta",
-        title: "예산 설계부터 코스까지 한 번에",
-        subtitle: "트라밸이 맞춤으로 가이드해 드립니다",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 무료 견적서 DM 받기"
+        "type": "cta",
+        "title": "예산 설계부터 코스까지 한 번에",
+        "subtitle": "트라밸이 맞춤으로 가이드해 드립니다",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 무료 견적서 DM 받기"
       }
     ]
   },
   {
-    id: 13,
-    country: "korea",
-    countryName: "한국",
-    mainColor: "#2B6CB0",
-    pointColor: "#ECC94B",
-    badge: "JEJU",
-    title: "제주도 서귀포 감성 명소 TOP 3",
-    slides: [
+    "id": 13,
+    "country": "korea",
+    "countryName": "한국",
+    "mainColor": "#2B6CB0",
+    "pointColor": "#ECC94B",
+    "badge": "JEJU",
+    "title": "제주도 서귀포 감성 명소 TOP 3",
+    "slides": [
       {
-        type: "cover",
-        title: "제주 서귀포 여행,<br>숨은 감성 명소 찾아볼까?",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "JEJU",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "제주 서귀포 여행,<br>숨은 감성 명소 찾아볼까?",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "JEJU",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "서귀포 숨은 감성 명소 3선",
-        subtitle: "사진 찍기 좋은 감성 스팟",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 외돌개 & 황우지해안", desc: "에메랄드 빛 선녀탕 스노클링 명소" },
-          { title: "02 엉또폭포 & 안덕계곡", desc: "비가 오면 장관을 이루는 비밀 폭포" },
-          { title: "03 위미리 귤밭 카페", desc: "초록빛 싱그러운 감귤 테마 산책로" }
+        "type": "content",
+        "title": "서귀포 숨은 감성 명소 3선",
+        "subtitle": "사진 찍기 좋은 감성 스팟",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 외돌개 & 황우지해안",
+            "desc": "에메랄드 빛 선녀탕 스노클링 명소",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 엉또폭포 & 안덕계곡",
+            "desc": "비가 오면 장관을 이루는 비밀 폭포",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 위미리 귤밭 카페",
+            "desc": "초록빛 싱그러운 감귤 테마 산책로",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "제주 대표 먹거리 미식 가이드",
-        subtitle: "제주의 맛을 오롯이 느끼다",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1080&q=80",
-        textContent: "두툼한 제주 흑돼지 구이부터 신선한 전복 성게미역국, 그리고 노란 감귤 디저트까지 즐기세요."
+        "type": "content",
+        "title": "제주 대표 먹거리 미식 가이드",
+        "subtitle": "제주의 맛을 오롯이 느끼다",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "두툼한 제주 흑돼지 구이부터 신선한 전복 성게미역국, 그리고 노란 감귤 디저트까지 즐기세요."
       },
       {
-        type: "content",
-        title: "제주 드라이브 & 해안도로 팁",
-        subtitle: "바람을 가르며 만나는 바다",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "신창풍차해안도로 해질녘 드라이브 필수", checked: true },
-          { label: "서귀포 매일올레시장 야시장 모닥치기 시식", checked: true }
-        ]
+        "type": "content",
+        "title": "제주 드라이브 & 해안도로 팁",
+        "subtitle": "바람을 가르며 만나는 바다",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "신창풍차해안도로 해질녘 드라이브 필수",
+            "checked": true
+          },
+          {
+            "label": "서귀포 매일올레시장 야시장 모닥치기 시식",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
       },
       {
-        type: "cta",
-        title: "푸른 바다 제주가 부를 때",
-        subtitle: "트라밸과 함께 망설임 없이 떠나세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 제주 힐링 플랜 DM 받기"
+        "type": "cta",
+        "title": "푸른 바다 제주가 부를 때",
+        "subtitle": "트라밸과 함께 망설임 없이 떠나세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 제주 힐링 플랜 DM 받기"
       }
     ]
   },
   {
-    id: 14,
-    country: "korea",
-    countryName: "한국",
-    mainColor: "#2B6CB0",
-    pointColor: "#ECC94B",
-    badge: "BUSAN",
-    title: "부산 광안리·영도 1박 2일 미식 코스",
-    slides: [
+    "id": 14,
+    "country": "korea",
+    "countryName": "한국",
+    "mainColor": "#2B6CB0",
+    "pointColor": "#ECC94B",
+    "badge": "BUSAN",
+    "title": "부산 광안리·영도 1박 2일 미식 코스",
+    "slides": [
       {
-        type: "cover",
-        title: "부산 광안리와 영도,<br>1박 2일 알찬 미식 여행",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "BUSAN",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "부산 광안리와 영도,<br>1박 2일 알찬 미식 여행",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "BUSAN",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "1박 2일 맛있는 부산 동선",
-        subtitle: "바다 뷰와 맛집을 한 번에 정복",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 영도 흰여울문화마을", desc: "절영해안산책로 따라 걸어가는 바다 감성" },
-          { title: "02 영도 해녀촌 성게김밥", desc: "파도 소리 들으며 즐기는 해산물 표 시그니처" },
-          { title: "03 광안리 드론쇼 & 회센터", desc: "광안대교 야경을 바라보며 시원한 낭만" }
+        "type": "content",
+        "title": "1박 2일 맛있는 부산 동선",
+        "subtitle": "바다 뷰와 맛집을 한 번에 정복",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 영도 흰여울문화마을",
+            "desc": "절영해안산책로 따라 걸어가는 바다 감성",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 영도 해녀촌 성게김밥",
+            "desc": "파도 소리 들으며 즐기는 해산물 표 시그니처",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 광안리 드론쇼 & 회센터",
+            "desc": "광안대교 야경을 바라보며 시원한 낭만",
+            "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "부산 필수 먹거리 리스트",
-        subtitle: "입이 즐거운 부산 여행",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1080&q=80",
-        textContent: "뜨끈한 돼지국밥부터 쫄깃한 비빔당면, 씨앗호떡까지 부산의 푸짐한 맛을 느껴보세요."
+        "type": "content",
+        "title": "부산 필수 먹거리 리스트",
+        "subtitle": "입이 즐거운 부산 여행",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "뜨끈한 돼지국밥부터 쫄깃한 비빔당면, 씨앗호떡까지 부산의 푸짐한 맛을 느껴보세요."
       },
       {
-        type: "cta",
-        title: "미식과 낭만의 바다 도시, 부산",
-        subtitle: "트라밸과 함께 신나게 떠나요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 부산 꿀맛 일정 DM 받기"
+        "type": "cta",
+        "title": "미식과 낭만의 바다 도시, 부산",
+        "subtitle": "트라밸과 함께 신나게 떠나요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 부산 꿀맛 일정 DM 받기"
       }
     ]
   },
   {
-    id: 15,
-    country: "korea",
-    countryName: "한국",
-    mainColor: "#2B6CB0",
-    pointColor: "#ECC94B",
-    badge: "GYEONGJU",
-    title: "경주 황리단길 역사 감성 투어",
-    slides: [
+    "id": 15,
+    "country": "korea",
+    "countryName": "한국",
+    "mainColor": "#2B6CB0",
+    "pointColor": "#ECC94B",
+    "badge": "GYEONGJU",
+    "title": "경주 황리단길 역사 감성 투어",
+    "slides": [
       {
-        type: "cover",
-        title: "역사와 현대의 공존,<br>경주 감성 힐링 여행",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "GYEONGJU",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "역사와 현대의 공존,<br>경주 감성 힐링 여행",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "GYEONGJU",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "한옥의 미와 야경 코스",
-        subtitle: "놓칠 수 없는 전통의 아름다움",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "황리단길 한옥 베이커리 카페 투어", checked: true },
-          { label: "동궁과 월지 밤의 황금빛 은하수 야경", checked: true },
-          { label: "첨성대 핑크뮬리 & 계림 숲 산책", checked: true }
+        "type": "content",
+        "title": "한옥의 미와 야경 코스",
+        "subtitle": "놓칠 수 없는 전통의 아름다움",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "황리단길 한옥 베이커리 카페 투어",
+            "checked": true
+          },
+          {
+            "label": "동궁과 월지 밤의 황금빛 은하수 야경",
+            "checked": true
+          },
+          {
+            "label": "첨성대 핑크뮬리 & 계림 숲 산책",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "type": "content",
+        "title": "황리단길 대표 먹거리 3선",
+        "subtitle": "줄 서서 먹는 경주 명물 디저트",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 십원빵",
+            "desc": "고소한 치즈가 길게 늘어나는 인기 간식",
+            "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 황남 옥수수 & 샌드",
+            "desc": "바삭한 옥수수 튀김과 달콤한 한옥 샌드",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 전통 황남빵",
+            "desc": "팥소가 가득 들어간 전통 명물 빵",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "황리단길 대표 먹거리 3선",
-        subtitle: "줄 서서 먹는 경주 명물 디저트",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 십원빵", desc: "고소한 치즈가 길게 늘어나는 인기 간식" },
-          { title: "02 황남 옥수수 & 샌드", desc: "바삭한 옥수수 튀김과 달콤한 한옥 샌드" },
-          { title: "03 전통 황남빵", desc: "팥소가 가득 들어간 전통 명물 빵" }
-        ]
-      },
-      {
-        type: "cta",
-        title: "천년의 낭만이 흐르는 경주",
-        subtitle: "트라밸과 가볍게 출발하세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 경주 낭만 일정 DM 받기"
+        "type": "cta",
+        "title": "천년의 낭만이 흐르는 경주",
+        "subtitle": "트라밸과 가볍게 출발하세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 경주 낭만 일정 DM 받기"
       }
     ]
   },
   {
-    id: 16,
-    country: "japan",
-    countryName: "일본",
-    mainColor: "#C53030",
-    pointColor: "#DD6B20",
-    badge: "TOKYO",
-    title: "도쿄 3박 4일 최적 동선 가이드",
-    slides: [
+    "id": 16,
+    "country": "japan",
+    "countryName": "일본",
+    "mainColor": "#C53030",
+    "pointColor": "#DD6B20",
+    "badge": "TOKYO",
+    "title": "도쿄 3박 4일 최적 동선 가이드",
+    "slides": [
       {
-        type: "cover",
-        title: "쇼핑과 미식을 정복할<br>도쿄 3박 4일 완벽 코스",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "TOKYO",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "쇼핑과 미식을 정복할<br>도쿄 3박 4일 완벽 코스",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "TOKYO",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "도쿄 3박 4일 핵심 동선",
-        subtitle: "트렌디한 매력과 쇼핑의 천국",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 시부야 & 하라주쿠", desc: "시부야 스카이 전망대와 명품 스트리트" },
-          { title: "02 긴자 & 아키하바라", desc: "고급 백화점 쇼핑과 애니메이션 컬처" },
-          { title: "03 아사쿠사 센소지", desc: "도쿄에서 즐기는 고풍스러운 전통 거리" }
+        "type": "content",
+        "title": "도쿄 3박 4일 핵심 동선",
+        "subtitle": "트렌디한 매력과 쇼핑의 천국",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 시부야 & 하라주쿠",
+            "desc": "시부야 스카이 전망대와 명품 스트리트",
+            "photoUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "02 긴자 & 아키하바라",
+            "desc": "고급 백화점 쇼핑과 애니메이션 컬처",
+            "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "title": "03 아사쿠사 센소지",
+            "desc": "도쿄에서 즐기는 고풍스러운 전통 거리",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "도쿄 3대 로컬 미식 탐방",
-        subtitle: "먹다 망한다는 미식의 도시",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1080&q=80",
-        textContent: "진한 돈코츠 라멘부터 입에서 녹는 규카츠, 그리고 츠키지 시장의 싱싱한 카이센동까지 미식을 즐기세요."
+        "type": "content",
+        "title": "도쿄 3대 로컬 미식 탐방",
+        "subtitle": "먹다 망한다는 미식의 도시",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "진한 돈코츠 라멘부터 입에서 녹는 규카츠, 그리고 츠키지 시장의 싱싱한 카이센동까지 미식을 즐기세요."
       },
       {
-        type: "cta",
-        title: "트렌디한 글로벌 도심, 도쿄",
-        subtitle: "트라밸과 함께 가볍게 떠나요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 도쿄 최적 코스 DM 받기"
+        "type": "cta",
+        "title": "트렌디한 글로벌 도심, 도쿄",
+        "subtitle": "트라밸과 함께 가볍게 떠나요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 도쿄 최적 코스 DM 받기"
       }
     ]
   },
   {
-    id: 17,
-    country: "japan",
-    countryName: "일본",
-    mainColor: "#C53030",
-    pointColor: "#DD6B20",
-    badge: "KYOTO",
-    title: "교토 아라시야마·기요미즈데라 전통 코스",
-    slides: [
+    "id": 17,
+    "country": "japan",
+    "countryName": "일본",
+    "mainColor": "#C53030",
+    "pointColor": "#DD6B20",
+    "badge": "KYOTO",
+    "title": "교토 아라시야마·기요미즈데라 전통 코스",
+    "slides": [
       {
-        type: "cover",
-        title: "시간이 멈춘 옛 수도,<br>교토 감성 전통 여행",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "KYOTO",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "시간이 멈춘 옛 수도,<br>교토 감성 전통 여행",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "KYOTO",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "자연과 역사를 걷다",
-        subtitle: "교토 최고의 고즈넉한 명소",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "아라시야마 대나무 숲길(치쿠린) 산책", checked: true },
-          { label: "기요미즈데라(청수사) 붉은 목조 주황 본당 뷰", checked: true },
-          { label: "후시미 이나리 신사 붉은 도리이 터널 걷기", checked: true }
-        ]
+        "type": "content",
+        "title": "자연과 역사를 걷다",
+        "subtitle": "교토 최고의 고즈넉한 명소",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "아라시야마 대나무 숲길(치쿠린) 산책",
+            "checked": true
+          },
+          {
+            "label": "기요미즈데라(청수사) 붉은 목조 주황 본당 뷰",
+            "checked": true
+          },
+          {
+            "label": "후시미 이나리 신사 붉은 도리이 터널 걷기",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
       },
       {
-        type: "content",
-        title: "교토 말차 & 가이세키 미식",
-        subtitle: "정갈함이 돋보이는 전통 미식",
-        layout: "half-photo",
-        hasModel: false,
-        photoUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1080&q=80",
-        textContent: "우지 말차로 만든 소프트 파르페와 료칸에서 맛보는 정갈한 계절 코스 가이세키를 느껴보세요."
+        "type": "content",
+        "title": "교토 말차 & 가이세키 미식",
+        "subtitle": "정갈함이 돋보이는 전통 미식",
+        "layout": "half-photo",
+        "hasModel": false,
+        "photoUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1080&q=80",
+        "textContent": "우지 말차로 만든 소프트 파르페와 료칸에서 맛보는 정갈한 계절 코스 가이세키를 느껴보세요."
       },
       {
-        type: "cta",
-        title: "교토 전통 힐링과 낭만 온천",
-        subtitle: "트라밸이 준비한 플랜을 만나보세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 교토 힐링 정보 DM 받기"
+        "type": "cta",
+        "title": "교토 전통 힐링과 낭만 온천",
+        "subtitle": "트라밸이 준비한 플랜을 만나보세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 교토 힐링 정보 DM 받기"
       }
     ]
   },
   {
-    id: 18,
-    country: "china",
-    countryName: "중국",
-    mainColor: "#9B2C2C",
-    pointColor: "#D69E2E",
-    badge: "ZHANGJIAJIE",
-    title: "장가계 무릉도원 부모님 효도 관광 가이드",
-    slides: [
+    "id": 18,
+    "country": "china",
+    "countryName": "중국",
+    "mainColor": "#9B2C2C",
+    "pointColor": "#D69E2E",
+    "badge": "ZHANGJIAJIE",
+    "title": "장가계 무릉도원 부모님 효도 관광 가이드",
+    "slides": [
       {
-        type: "cover",
-        title: "영화 아바타 속 신비한 비경,<br>장가계 효도 관광",
-        subtitle: "TRAVEL WITH TLABAL",
-        layout: "cover-split",
-        badgeText: "ZHANGJIAJIE",
-        hasModel: true,
-        bgImage: "https://images.unsplash.com/photo-1541845157-a6d2d100c931?auto=format&fit=crop&w=1080&q=80"
+        "type": "cover",
+        "title": "영화 아바타 속 신비한 비경,<br>장가계 효도 관광",
+        "subtitle": "TRAVEL WITH TLABAL",
+        "layout": "cover-split",
+        "badgeText": "ZHANGJIAJIE",
+        "hasModel": true,
+        "bgImage": "https://images.unsplash.com/photo-1541845157-a6d2d100c931?auto=format&fit=crop&w=1080&q=80"
       },
       {
-        type: "content",
-        title: "천하 비경 대표 명소 3선",
-        subtitle: "감탄이 절로 나오는 아찔한 자연",
-        layout: "split-3",
-        hasModel: false,
-        columns: [
-          { title: "01 천문산 케이블카", desc: "세계 최장 7.5km 케이블카 타고 올라가는 산" },
-          { title: "02 원가계 백룡엘리베이터", desc: "326m 높이 초고속 바위 엘리베이터" },
-          { title: "03 천문산 유리잔도", desc: "절벽에 붙어 걷는 짜릿한 하늘 산책로" }
+        "type": "content",
+        "title": "천하 비경 대표 명소 3선",
+        "subtitle": "감탄이 절로 나오는 아찔한 자연",
+        "layout": "split-3",
+        "hasModel": false,
+        "columns": [
+          {
+            "title": "01 천문산 케이블카",
+            "desc": "세계 최장 7.5km 케이블카 타고 올라가는 산",
+            "photoUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "02 원가계 백룡엘리베이터",
+            "desc": "326m 높이 초고속 바위 엘리베이터",
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "title": "03 천문산 유리잔도",
+            "desc": "절벽에 붙어 걷는 짜릿한 하늘 산책로",
+            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+          }
         ]
       },
       {
-        type: "content",
-        title: "부모님 만족 200% 안심 팁",
-        subtitle: "편안하고 정성스러운 관광 노하우",
-        layout: "checklist",
-        hasModel: false,
-        checklistItems: [
-          { label: "전 일정 에스컬레이터 & 리프트 동선 확보", checked: true },
-          { label: "부모님 입맛 맞춤 한식 & 버섯전골 구비", checked: true },
-          { label: "전문 한국어 가이드 및 단독 전용 차량", checked: true }
-        ]
+        "type": "content",
+        "title": "부모님 만족 200% 안심 팁",
+        "subtitle": "편안하고 정성스러운 관광 노하우",
+        "layout": "checklist",
+        "hasModel": false,
+        "checklistItems": [
+          {
+            "label": "전 일정 에스컬레이터 & 리프트 동선 확보",
+            "checked": true
+          },
+          {
+            "label": "부모님 입맛 맞춤 한식 & 버섯전골 구비",
+            "checked": true
+          },
+          {
+            "label": "전문 한국어 가이드 및 단독 전용 차량",
+            "checked": true
+          }
+        ],
+        "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
       },
       {
-        type: "cta",
-        title: "일생에 단 한 번 최고의 비경",
-        subtitle: "장가계 감동 여행을 선물하세요",
-        layout: "cta-default",
-        hasModel: true,
-        buttonText: "'트라밸' 댓글 남기고 장가계 특전 일정 DM 받기"
+        "type": "cta",
+        "title": "일생에 단 한 번 최고의 비경",
+        "subtitle": "장가계 감동 여행을 선물하세요",
+        "layout": "cta-default",
+        "hasModel": true,
+        "buttonText": "'트라밸' 댓글 남기고 장가계 특전 일정 DM 받기"
       }
     ]
   }
@@ -1444,6 +1793,7 @@ function loadTopic(index) {
           <div class="split-3-grid">
             ${slide.columns.map((col, cIdx) => `
               <div class="split-column-item">
+                ${col.photoUrl ? `<div class="col-photo-box" style="background-image: url('${col.photoUrl}');"></div>` : ''}
                 <div class="col-icon" style="color: var(--main-color); font-weight: bold;">0${cIdx + 1}</div>
                 <div class="col-title" contenteditable="true">${col.title}</div>
                 <div class="col-desc" contenteditable="true">${col.desc}</div>
@@ -1494,13 +1844,16 @@ function loadTopic(index) {
         `;
       } else if (slide.layout === "checklist" && slide.checklistItems) {
         innerVisualHtml = `
-          <div class="checklist-wrapper">
-            ${slide.checklistItems.map((item, iIdx) => `
-              <div class="checklist-item ${item.checked ? 'checked' : ''}">
-                <span class="check-box" style="background-color: ${item.checked ? 'var(--main-color)' : 'transparent'}; border-color: var(--main-color);">✓</span>
-                <span class="check-label" contenteditable="true">${item.label}</span>
-              </div>
-            `).join("")}
+          <div class="checklist-container-wrap">
+            ${slide.photoUrl ? `<div class="checklist-photo-box" style="background-image: url('${slide.photoUrl}');"></div>` : ''}
+            <div class="checklist-wrapper">
+              ${slide.checklistItems.map((item, iIdx) => `
+                <div class="checklist-item ${item.checked ? 'checked' : ''}">
+                  <span class="check-box" style="background-color: ${item.checked ? 'var(--main-color)' : 'transparent'}; border-color: var(--main-color);">✓</span>
+                  <span class="check-label" contenteditable="true">${item.label}</span>
+                </div>
+              `).join("")}
+            </div>
           </div>
         `;
       } else if (slide.layout === "city-detail") {
