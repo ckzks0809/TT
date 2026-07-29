@@ -72,7 +72,7 @@ const topicsData = [
         subtitle: "프로필 링크에서 바로 확인하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남겨서 특별 플랜 받기"
+        buttonText: "'트라밸' 댓글 남겨서 특별 플랜 받기"
       }
     ]
   },
@@ -142,7 +142,7 @@ const topicsData = [
         subtitle: "지금 나에게 맞는 도시 찾기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 추천 도시 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 추천 도시 DM 받기"
       }
     ]
   },
@@ -216,7 +216,7 @@ const topicsData = [
         subtitle: "지금 바로 1:1 맞춤 상담 받아보기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 상세 견적서 받기"
+        buttonText: "'트라밸' 댓글 남기고 상세 견적서 받기"
       }
     ]
   },
@@ -286,7 +286,7 @@ const topicsData = [
         subtitle: "실시간 최저가 확인 및 간편 예약하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 태국 특가 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 태국 특가 DM 받기"
       }
     ]
   },
@@ -356,7 +356,7 @@ const topicsData = [
         subtitle: "트라밸 플래너에게 어울리는 코스 추천받기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 맞춤 코스 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 맞춤 코스 DM 받기"
       }
     ]
   },
@@ -434,7 +434,7 @@ const topicsData = [
         subtitle: "남은 예약은 트라밸에서 안전하게 완료하세요",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 체크리스트 PDF 받기"
+        buttonText: "'트라밸' 댓글 남기고 체크리스트 PDF 받기"
       }
     ]
   },
@@ -504,7 +504,7 @@ const topicsData = [
         subtitle: "트라밸 맞춤형 라오스 힐링 일정 알아보기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 라오스 비밀 코스 받기"
+        buttonText: "'트라밸' 댓글 남기고 라오스 비밀 코스 받기"
       }
     ]
   },
@@ -574,7 +574,7 @@ const topicsData = [
         subtitle: "트라밸의 검증된 힐링 패키지 코스 확인하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 힐링 가이드 받기"
+        buttonText: "'트라밸' 댓글 남기고 힐링 가이드 받기"
       }
     ]
   },
@@ -645,7 +645,7 @@ const topicsData = [
         subtitle: "이 가이드를 북마크하고 트라밸과 안심 여행을 시작하세요",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 꿀팁 가이드 받기"
+        buttonText: "'트라밸' 댓글 남기고 꿀팁 가이드 받기"
       }
     ]
   },
@@ -715,7 +715,7 @@ const topicsData = [
         subtitle: "트라밸 프로필 링크에서 리조트 패키지 예약하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 특별 휴양 플랜 받기"
+        buttonText: "'트라밸' 댓글 남기고 특별 휴양 플랜 받기"
       }
     ]
   },
@@ -785,7 +785,7 @@ const topicsData = [
         subtitle: "인기 리조트 3곳 모두 파격 할인가로 예약하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 리조트 비밀 할인율 받기"
+        buttonText: "'트라밸' 댓글 남기고 리조트 비밀 할인율 받기"
       }
     ]
   },
@@ -859,7 +859,7 @@ const topicsData = [
         subtitle: "트라밸 카카오 채널에서 전문 플래너 상담받기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 무료 견적서 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 무료 견적서 DM 받기"
       }
     ]
   },
@@ -931,7 +931,7 @@ const topicsData = [
         subtitle: "트라밸 제주 플래너 상담 바로가기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 제주 힐링 플랜 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 제주 힐링 플랜 DM 받기"
       }
     ]
   },
@@ -981,7 +981,7 @@ const topicsData = [
         subtitle: "지금 바로 1박 2일 맛집 지도 받기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 부산 꿀맛 일정 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 부산 꿀맛 일정 DM 받기"
       }
     ]
   },
@@ -1032,7 +1032,7 @@ const topicsData = [
         subtitle: "경주 특별 전통 한옥 플랜 상세 보기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 경주 낭만 일정 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 경주 낭만 일정 DM 받기"
       }
     ]
   },
@@ -1085,7 +1085,7 @@ const topicsData = [
         subtitle: "도쿄 최적 3박 4일 지도북 DM 받기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 도쿄 최적 코스 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 도쿄 최적 코스 DM 받기"
       }
     ]
   },
@@ -1136,7 +1136,7 @@ const topicsData = [
         subtitle: "교토 힐링 료칸 기획전 확인하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 교토 힐링 정보 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 교토 힐링 정보 DM 받기"
       }
     ]
   },
@@ -1189,7 +1189,7 @@ const topicsData = [
         subtitle: "장가계 단독 프리미엄 효도 여행 기획 확인하기",
         layout: "cta-default",
         hasModel: true,
-        buttonText: "댓글 남기고 장가계 특전 일정 DM 받기"
+        buttonText: "'트라밸' 댓글 남기고 장가계 특전 일정 DM 받기"
       }
     ]
   }
@@ -1644,7 +1644,7 @@ function loadTopic(index) {
           ${guideProfileHtml}
           
           <div class="cta-action-button" style="background-color: var(--point-color); color: #111; font-weight: bold; margin-top: 10px;" contenteditable="true">
-            ${slide.buttonText}
+            ${slide.buttonText.replace(/'트라밸'/g, `'${advBrandNameForCta}'`)}
           </div>
 
           <div class="instagram-profile-box" style="margin-top: 10px;">
@@ -3296,7 +3296,7 @@ function parsePlanningTextToSlides(title, country, text) {
     subtitle: `${advContactUrl}에서 상담 신청하기`,
     layout: "cta-default",
     hasModel: true,
-    buttonText: `댓글 남기고 ${advBrandName} 바우처 받기`
+    buttonText: `'트라밸' 댓글 남기고 ${advBrandName} 바우처 받기`
   });
 
   return {
