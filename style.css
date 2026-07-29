@@ -234,7 +234,7 @@ header {
 
 .card-preview-item {
   width: 378px;
-  height: 378px;
+  height: 472px;  /* 378 × (1350/1080) = 472px  →  4:5 */
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -434,11 +434,11 @@ header {
 }
 
 /* ==========================================================
-   INSTAGRAM CARD LAYOUT (1080px X 1080px)
-   ========================================================== */
+   INSTAGRAM CARD LAYOUT (1080px X 1350px  —  4:5 portrait)
+   --------------------------------------------------------- */
 .instagram-card {
   width: 1080px;
-  height: 1080px;
+  height: 1350px;
   position: absolute;
   top: 0;
   left: 0;
@@ -718,7 +718,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 600px;
+  height: 870px;  /* ~64% of card height (was 600/1080, now 870/1350) */
   gap: 50px;
 }
 
@@ -1531,7 +1531,7 @@ header {
 }
 
 .instagram-card.card-no-model .cover-split-wrapper {
-  height: 720px !important;
+  height: 990px !important;  /* portrait: fits the taller 1350px card */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1716,13 +1716,13 @@ header {
   /* Core scaling trick for card preview containers on mobile */
   .card-preview-item {
     width: 320px !important;
-    height: 320px !important;
+    height: 400px !important;  /* 320 × (1350/1080) = 400px */
     margin: 0 auto !important;
   }
 
-  /* Scaled down transform scale of the actual 1080x1080 instagram card inside */
+  /* Scaled down transform scale of the actual 1080x1350 instagram card inside */
   .card-preview-item .instagram-card {
-    transform: scale(0.296) !important; /* 320 / 1080 = ~0.296 */
+    transform: scale(0.35) !important; /* 378 / 1080 = ~0.35 */
     transform-origin: top left !important;
   }
 
@@ -1746,10 +1746,10 @@ header {
 @media (max-width: 360px) {
   .card-preview-item {
     width: 275px !important;
-    height: 275px !important;
+    height: 344px !important;  /* 275 × (1350/1080) */
   }
   .card-preview-item .instagram-card {
-    transform: scale(0.254) !important; /* 275 / 1080 = ~0.254 */
+    transform: scale(0.237) !important; /* 256 / 1080 ≈ 0.237 for 360px-wide phones */
   }
 }
 

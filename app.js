@@ -2199,13 +2199,13 @@ async function downloadActiveTopic() {
     const topic = topicsData[currentTopicIndex];
     const cards = document.querySelectorAll(".instagram-card");
 
-    // Make temporary high-res rendering div (1080x1080px exact sizing)
+    // Make temporary high-res rendering div (1080x1350px — 4:5 portrait)
     const exportContainer = document.createElement("div");
     exportContainer.style.position = "absolute";
     exportContainer.style.top = "-9999px";
     exportContainer.style.left = "-9999px";
     exportContainer.style.width = "1080px";
-    exportContainer.style.height = "1080px";
+    exportContainer.style.height = "1350px";
     document.body.appendChild(exportContainer);
 
     for (let i = 0; i < cards.length; i++) {
@@ -2213,7 +2213,7 @@ async function downloadActiveTopic() {
       // Clone card to the high-res rendering box
       const clone = card.cloneNode(true);
       clone.style.width = "1080px";
-      clone.style.height = "1080px";
+      clone.style.height = "1350px";
       clone.style.transform = "none";
       clone.style.borderRadius = "0px";
       clone.style.boxShadow = "none";
@@ -2233,8 +2233,8 @@ async function downloadActiveTopic() {
 
       const canvas = await html2canvas(clone, {
         width: 1080,
-        height: 1080,
-        scale: 1, // Keep original size 1080x1080
+        height: 1350,
+        scale: 1, // Keep original size 1080x1350
         useCORS: true,
         allowTaint: true,
         logging: false
@@ -2280,7 +2280,7 @@ async function downloadAllTopics() {
   exportContainer.style.top = "-9999px";
   exportContainer.style.left = "-9999px";
   exportContainer.style.width = "1080px";
-  exportContainer.style.height = "1080px";
+  exportContainer.style.height = "1350px";
   document.body.appendChild(exportContainer);
 
   const initialTopicIndex = currentTopicIndex;
@@ -2300,7 +2300,7 @@ async function downloadAllTopics() {
         const card = cards[i];
         const clone = card.cloneNode(true);
         clone.style.width = "1080px";
-        clone.style.height = "1080px";
+        clone.style.height = "1350px";
         clone.style.transform = "none";
         clone.style.borderRadius = "0px";
         clone.style.boxShadow = "none";
@@ -2318,7 +2318,7 @@ async function downloadAllTopics() {
 
         const canvas = await html2canvas(clone, {
           width: 1080,
-          height: 1080,
+          height: 1350,
           scale: 1,
           useCORS: true,
           allowTaint: true,
@@ -2545,7 +2545,7 @@ async function scheduleAllCardsToBuffer() {
   exportContainer.style.top = "-9999px";
   exportContainer.style.left = "-9999px";
   exportContainer.style.width = "1080px";
-  exportContainer.style.height = "1080px";
+  exportContainer.style.height = "1350px";
   document.body.appendChild(exportContainer);
 
   try {
@@ -2587,7 +2587,7 @@ async function scheduleAllCardsToBuffer() {
         
         const clone = card.cloneNode(true);
         clone.style.width = "1080px";
-        clone.style.height = "1080px";
+        clone.style.height = "1350px";
         clone.style.transform = "none";
         clone.style.borderRadius = "0px";
         clone.style.boxShadow = "none";
@@ -2602,7 +2602,7 @@ async function scheduleAllCardsToBuffer() {
 
         const canvas = await html2canvas(clone, {
           width: 1080,
-          height: 1080,
+          height: 1350,
           scale: 1,
           useCORS: true,
           allowTaint: true,
@@ -4063,7 +4063,7 @@ async function downloadRangeTopics() {
   exportContainer.style.top = "-9999px";
   exportContainer.style.left = "-9999px";
   exportContainer.style.width = "1080px";
-  exportContainer.style.height = "1080px";
+  exportContainer.style.height = "1350px";
   document.body.appendChild(exportContainer);
 
   try {
@@ -4079,7 +4079,7 @@ async function downloadRangeTopics() {
         // Clone card for high-res output
         const clone = card.cloneNode(true);
         clone.style.width = "1080px";
-        clone.style.height = "1080px";
+        clone.style.height = "1350px";
         clone.style.transform = "none";
         clone.style.borderRadius = "0px";
         clone.style.boxShadow = "none";
@@ -4094,7 +4094,7 @@ async function downloadRangeTopics() {
 
         const canvas = await html2canvas(clone, {
           width: 1080,
-          height: 1080,
+          height: 1350,
           scale: 1,
           useCORS: true,
           allowTaint: true,
