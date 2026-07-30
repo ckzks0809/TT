@@ -35,6 +35,24 @@
       <button id="download-execute-btn" class="btn-primary" style="padding: 10px 18px; font-weight: bold;">
         <i class="fa-solid fa-cloud-arrow-down"></i> 이미지 다운로드 (ZIP)
       </button>
+
+      <!-- Delete Topics Controller Box -->
+      <div class="delete-range-box" style="display: flex; align-items: center; gap: 6px; background: rgba(239, 68, 68, 0.1); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(239, 68, 68, 0.3);">
+        <span style="font-size: 11px; color: #fca5a5; font-weight: bold;">🗑️ 주제 삭제:</span>
+        <select id="delete-mode-select" class="select-control" style="padding: 4px; font-size: 11px; width: 100px; height: 26px; background: #1a1b24; color: #fff; border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 4px;">
+          <option value="active" selected>현재 주제만</option>
+          <option value="range">선택 구간</option>
+          <option value="all">전체 주제</option>
+        </select>
+        <div id="delete-range-inputs" style="display: none; align-items: center; gap: 4px;">
+          <input type="number" id="delete-start-idx" class="select-control" value="1" min="1" style="width: 45px; padding: 4px; font-size: 11px; text-align: center; height: 24px; background: #1a1b24; color: #fff; border: 1px solid rgba(239, 68, 68, 0.4);">
+          <span style="font-size: 11px; color: #fca5a5;">~</span>
+          <input type="number" id="delete-end-idx" class="select-control" value="1" min="1" style="width: 45px; padding: 4px; font-size: 11px; text-align: center; height: 24px; background: #1a1b24; color: #fff; border: 1px solid rgba(239, 68, 68, 0.4);">
+        </div>
+        <button id="delete-execute-btn" class="btn-danger" style="background: #dc2626; color: white; border: none; padding: 6px 12px; font-size: 11px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.2s;">
+          <i class="fa-solid fa-trash-can"></i> 삭제
+        </button>
+      </div>
     </div>
   </header>
 
@@ -372,7 +390,7 @@
         <h3><i class="fa-solid fa-clock-rotate-left"></i> Buffer 자동 예약 등록</h3>
         <div class="control-row">
           <label for="buffer-token-input">Buffer Access Token</label>
-          <input type="password" id="buffer-token-input" class="select-control" style="font-family: monospace;" placeholder="토큰 입력" value="Hk9qlrQcduNsACYArVceM9Ocf0cLx_UfowH1z2IVEWH">
+          <input type="password" id="buffer-token-input" class="select-control" style="font-family: monospace;" placeholder="토큰 입력" value="EALPfg92u5RMOUDU_9YGW4xcPlHKiJStdEzMz21Xbwn">
         </div>
         <div class="control-row" style="margin-top: 10px;">
           <button id="buffer-load-channels-btn" class="btn-secondary" style="width: 100%; padding: 8px;">
