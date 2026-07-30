@@ -149,7 +149,7 @@ const topicsData = [
           {
             "title": "02 해산물 바비큐",
             "desc": "갓 잡은 싱싱한 랍스터와 가리비 구이",
-            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "03 분짜 & 분뽀후에",
@@ -605,7 +605,7 @@ const topicsData = [
           {
             "title": "03 신닷 (라오스 BBQ)",
             "desc": "구이와 샤브샤브를 동시에 즐기는 요리",
-            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=600&q=80"
           }
         ]
       },
@@ -841,12 +841,12 @@ const topicsData = [
           {
             "title": "02 돼지고기 시시그",
             "desc": "철판에 볶아 매콤 고소한 현지 시그니처",
-            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "03 감바스 & 알로나 씨푸드",
             "desc": "갓 잡은 새우와 해산물 바비큐 요리",
-            "photoUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=600&q=80"
           }
         ]
       },
@@ -1242,17 +1242,17 @@ const topicsData = [
           {
             "title": "01 십원빵",
             "desc": "고소한 치즈가 길게 늘어나는 인기 간식",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "02 황남 옥수수 & 샌드",
             "desc": "바삭한 옥수수 튀김과 달콤한 한옥 샌드",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "03 전통 황남빵",
             "desc": "팥소가 가득 들어간 전통 명물 빵",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
           }
         ]
       },
@@ -1294,17 +1294,17 @@ const topicsData = [
           {
             "title": "01 시부야 & 하라주쿠",
             "desc": "시부야 스카이 전망대와 명품 스트리트",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "02 긴자 & 아키하바라",
             "desc": "고급 백화점 쇼핑과 애니메이션 컬처",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "03 아사쿠사 센소지",
             "desc": "도쿄에서 즐기는 고풍스러운 전통 거리",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80"
           }
         ]
       },
@@ -1414,17 +1414,17 @@ const topicsData = [
           {
             "title": "01 천문산 케이블카",
             "desc": "세계 최장 7.5km 케이블카 타고 올라가는 산",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1541845157-a6d2d100c931?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "02 원가계 백룡엘리베이터",
             "desc": "326m 높이 초고속 바위 엘리베이터",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=600&q=80"
           },
           {
             "title": "03 천문산 유리잔도",
             "desc": "절벽에 붙어 걷는 짜릿한 하늘 산책로",
-            "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=600&q=80"
           }
         ]
       },
@@ -2180,6 +2180,94 @@ function setupEventListeners() {
       }
     });
   }
+
+  
+  // Topic Delete Controls Handler Setup
+  const deleteModeSelect = document.getElementById("delete-mode-select");
+  const deleteRangeInputs = document.getElementById("delete-range-inputs");
+  const deleteExecuteBtn = document.getElementById("delete-execute-btn");
+
+  if (deleteModeSelect && deleteRangeInputs) {
+    deleteModeSelect.addEventListener("change", () => {
+      if (deleteModeSelect.value === "range") {
+        deleteRangeInputs.style.display = "flex";
+      } else {
+        deleteRangeInputs.style.display = "none";
+      }
+    });
+  }
+
+  if (deleteExecuteBtn) {
+    deleteExecuteBtn.addEventListener("click", () => {
+      const mode = deleteModeSelect?.value || "active";
+      if (mode === "active") {
+        deleteActiveTopic();
+      } else if (mode === "all") {
+        deleteAllTopics();
+      } else {
+        deleteRangeTopics();
+      }
+    });
+  }
+
+  function deleteActiveTopic() {
+    if (topicsData.length <= 1) {
+      alert("최소 1개의 주제는 유지되어야 합니다.");
+      return;
+    }
+    if (confirm(`현재 주제 (${currentTopicIndex + 1}번: ${topicsData[currentTopicIndex].title})를 삭제하시겠습니까?`)) {
+      topicsData.splice(currentTopicIndex, 1);
+      if (currentTopicIndex >= topicsData.length) {
+        currentTopicIndex = topicsData.length - 1;
+      }
+      loadTopic(currentTopicIndex);
+      renderTopicsList();
+      updateAllButtonsText();
+      alert("삭제되었습니다.");
+    }
+  }
+
+  function deleteRangeTopics() {
+    const startVal = parseInt(document.getElementById("delete-start-idx")?.value || "1", 10);
+    const endVal = parseInt(document.getElementById("delete-end-idx")?.value || "1", 10);
+
+    const startIdx = Math.max(0, startVal - 1);
+    const endIdx = Math.min(topicsData.length - 1, endVal - 1);
+
+    if (startIdx > endIdx) {
+      alert("시작 주제 번호가 끝 주제 번호보다 클 수 없습니다.");
+      return;
+    }
+
+    const deleteCount = endIdx - startIdx + 1;
+    if (topicsData.length - deleteCount < 1) {
+      alert("전체 삭제는 '전체 주제' 선택 모드를 사용해주세요. 최소 1개는 유지되어야 합니다.");
+      return;
+    }
+
+    if (confirm(`${startVal}번부터 ${endVal}번까지 총 ${deleteCount}개 주제를 삭제하시겠습니까?`)) {
+      topicsData.splice(startIdx, deleteCount);
+      currentTopicIndex = Math.min(startIdx, topicsData.length - 1);
+      loadTopic(currentTopicIndex);
+      renderTopicsList();
+      updateAllButtonsText();
+      alert("${deleteCount}개 주제가 삭제되었습니다.");
+    }
+  }
+
+  function deleteAllTopics() {
+    if (confirm("모든 주제 카드뉴스를 삭제하고 기본 1개로 초기화하시겠습니까?")) {
+      const firstTopic = topicsData[0];
+      topicsData.length = 0;
+      topicsData.push(firstTopic);
+      currentTopicIndex = 0;
+      loadTopic(0);
+      renderTopicsList();
+      updateAllButtonsText();
+      alert("전체 주제가 초기화되었습니다.");
+    }
+  }
+
 
   // Buffer Scheduler Event Handlers
   document.getElementById("buffer-load-channels-btn").addEventListener("click", loadBufferChannels);
