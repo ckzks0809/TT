@@ -62,7 +62,7 @@ const topicsData = [
           {
             "title": "03 에그커피 & 코코넛스무디",
             "desc": "달콤하고 부드러운 현지 시그니처 음료",
-            "photoUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+            "photoUrl": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80"
           }
         ]
       },
@@ -72,7 +72,7 @@ const topicsData = [
         "subtitle": "알아두면 유용한 베트남 여행 정보",
         "layout": "checklist",
         "hasModel": false,
-        "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+        "photoUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=800&q=80",
         "checklistItems": [
           {
             "label": "그랩(Grab) 앱 사전 설치 및 카드 등록 필수",
@@ -206,7 +206,7 @@ const topicsData = [
         "layout": "cover-split",
         "badgeText": "PHU QUOC",
         "hasModel": true,
-        "bgImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1080&q=80"
+        "bgImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80"
       },
       {
         "type": "content",
@@ -320,7 +320,7 @@ const topicsData = [
             "checked": true
           }
         ],
-        "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+        "photoUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
       },
       {
         "type": "content",
@@ -504,7 +504,7 @@ const topicsData = [
             "checked": true
           }
         ],
-        "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+        "photoUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
       },
       {
         "type": "content",
@@ -745,7 +745,7 @@ const topicsData = [
             "checked": true
           }
         ],
-        "photoUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=800&q=80"
+        "photoUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
       },
       {
         "type": "content",
@@ -998,7 +998,7 @@ const topicsData = [
             "checked": true
           }
         ],
-        "photoUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+        "photoUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
       },
       {
         "type": "content",
@@ -2460,10 +2460,12 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 // Download all 6 cards of the CURRENT active topic as ZIP
 async function downloadActiveTopic() {
-  const downloadBtn = document.getElementById("download-active-btn");
-  const originalText = downloadBtn.innerHTML;
-  downloadBtn.disabled = true;
-  downloadBtn.innerHTML = `<span>⏳ 렌더링 중...</span>`;
+  const downloadBtn = document.getElementById("download-active-btn") || document.getElementById("download-execute-btn");
+  const originalText = downloadBtn ? downloadBtn.innerHTML : "";
+  if (downloadBtn) {
+    downloadBtn.disabled = true;
+    downloadBtn.innerHTML = `<span>⏳ 렌더링 중...</span>`;
+  }
 
   try {
     const zip = new JSZip();
@@ -2532,15 +2534,21 @@ async function downloadActiveTopic() {
     console.error("Rendering failed:", error);
     alert("이미지 렌더링 중 오류가 발생했습니다. 브라우저 콘솔을 확인해주세요.");
   } finally {
-    downloadBtn.disabled = false;
-    downloadBtn.innerHTML = originalText;
+    if (downloadBtn) {
+      downloadBtn.disabled = false;
+      downloadBtn.innerHTML = originalText;
+    }
   }
 }
 
 // Download ALL 12 topics (72 slides) as a combined ZIP archive
 async function downloadAllTopics() {
-  const downloadBtn = document.getElementById("download-all-btn");
-  const originalText = downloadBtn.innerHTML;
+  const downloadBtn = document.getElementById("download-all-btn") || document.getElementById("download-execute-btn");
+  const originalText = downloadBtn ? downloadBtn.innerHTML : "";
+  if (downloadBtn) {
+    downloadBtn.disabled = true;
+    downloadBtn.innerHTML = `<span>⏳ 전체 렌더링 중...</span>`;
+  }
   downloadBtn.disabled = true;
   
   const zip = new JSZip();
@@ -2623,8 +2631,10 @@ async function downloadAllTopics() {
       document.body.removeChild(exportContainer);
     }
   } finally {
-    downloadBtn.disabled = false;
-    downloadBtn.innerHTML = originalText;
+    if (downloadBtn) {
+      downloadBtn.disabled = false;
+      downloadBtn.innerHTML = originalText;
+    }
   }
 }
 
